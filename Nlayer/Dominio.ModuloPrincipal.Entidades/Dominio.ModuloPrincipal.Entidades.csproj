@@ -8,7 +8,7 @@
     <ProjectGuid>{8384B62D-C8A9-45D8-8A3A-E51D495B3DE5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sci.Nlayer.Dominio.ModuloPrincipal.Entidades</RootNamespace>
+    <RootNamespace>Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades</RootNamespace>
     <AssemblyName>Sci.Nlayer.Dominio.ModuloPrincipal.Entidades</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

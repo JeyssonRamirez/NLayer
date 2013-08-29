@@ -15,7 +15,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
+namespace Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades
 {
     [DataContract(IsReference = true)]
     [KnownType(typeof(Aplicacion))]
@@ -330,6 +330,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         private System.DateTime _registrado;
 
         #endregion
+
         #region Navigation Properties
     
         [DataMember]
@@ -367,6 +368,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         private Usuario _usuario;
 
         #endregion
+
         #region ChangeTracking
     
         protected virtual void OnPropertyChanged(String propertyName)
@@ -449,6 +451,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         }
 
         #endregion
+
         #region Association Fixup
     
         private void FixupAplicacion(Aplicacion previousValue)
@@ -530,5 +533,6 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         }
 
         #endregion
+
     }
 }

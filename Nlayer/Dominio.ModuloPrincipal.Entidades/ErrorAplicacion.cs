@@ -15,7 +15,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
+namespace Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades
 {
     [DataContract(IsReference = true)]
     public partial class ErrorAplicacion: IObjectWithChangeTracker, INotifyPropertyChanged
@@ -117,6 +117,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         private Nullable<System.DateTime> _registrado;
 
         #endregion
+
         #region ChangeTracking
     
         protected virtual void OnPropertyChanged(String propertyName)
@@ -197,5 +198,6 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         }
 
         #endregion
+
     }
 }

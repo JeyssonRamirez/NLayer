@@ -15,7 +15,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
+namespace Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades
 {
     [DataContract(IsReference = true)]
     [KnownType(typeof(Propiedad))]
@@ -90,6 +90,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         private int _propiedadId;
 
         #endregion
+
         #region Navigation Properties
     
         [DataMember]
@@ -127,6 +128,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         private Rol _rol;
 
         #endregion
+
         #region ChangeTracking
     
         protected virtual void OnPropertyChanged(String propertyName)
@@ -209,6 +211,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         }
 
         #endregion
+
         #region Association Fixup
     
         private void FixupPropiedad(Propiedad previousValue)
@@ -290,5 +293,6 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         }
 
         #endregion
+
     }
 }

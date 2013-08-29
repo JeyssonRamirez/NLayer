@@ -15,7 +15,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
+namespace Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades
 {
     [DataContract(IsReference = true)]
     [KnownType(typeof(RolPropiedad))]
@@ -74,6 +74,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         private string _nombre;
 
         #endregion
+
         #region Navigation Properties
     
         [DataMember]
@@ -147,6 +148,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         private TrackableCollection<RolUsuario> _rolUsuario;
 
         #endregion
+
         #region ChangeTracking
     
         protected virtual void OnPropertyChanged(String propertyName)
@@ -229,6 +231,7 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         }
 
         #endregion
+
         #region Association Fixup
     
         private void FixupRolPropiedad(object sender, NotifyCollectionChangedEventArgs e)
@@ -310,5 +313,6 @@ namespace Sci.Nlayer.Dominio.ModuloPrincipal.Entidades
         }
 
         #endregion
+
     }
 }
