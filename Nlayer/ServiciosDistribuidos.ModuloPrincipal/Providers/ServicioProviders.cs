@@ -1,28 +1,44 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="ServicioProviders.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
-// </copyright>
-// <author>Jhonnys López Celedon</author>
-// -----------------------------------------------------------------------
+﻿//   -----------------------------------------------------------------------
+//   <copyright file=ServicioProviders.cs company="Banlinea">
+//       Copyright (c) Banlinea Todos los derechos reservados.
+//   </copyright>
+//   <author>Jeysson Stevens  Ramirez </author>
+//   <Date>  2013 -08-29  - 11:16 a.m.</Date>
+//   <Update> 2013-08-29 - 11:53 a.m.</Update>
+//   -----------------------------------------------------------------------
+
+#region
 
 using System;
 using System.Data;
 using System.ServiceModel;
-using Sci.Nlayer.Infraestructura.Transversales.IoC;
-using Sci.Nlayer.Infraestructura.Transversales.Logging;
-using Sci.Nlayer.ServiciosDistribuidos.Nucleo.ManejoDeErrores;
+using Nlayer.Nlayer.Infraestructura.Transversales.IoC;
+using Nlayer.Nlayer.Infraestructura.Transversales.Logging;
+using Nlayer.Nlayer.ServiciosDistribuidos.Nucleo.ManejoDeErrores;
 
-namespace Sci.Nlayer.ServiciosDistribuidos.ModuloPrincipal.Providers
+#endregion
+
+namespace Nlayer.Nlayer.ServiciosDistribuidos.ModuloPrincipal.Providers
 {
     public class ServicioProviders : IServicioProviders
     {
         #region IServicioProviders Members
 
-        public bool Test() { return true; }
-
-        public void RegistrarUsuario(Guid providerUserKey, string aplicacion, string login, string password, string email, string preguntaPassword, string respuestaPassword, string comentario, DateTime ultimaActividad, DateTime ultimaSesion, DateTime ultimoCambioDePassword, int cantidadIntentosFaillidosPassword, DateTime inicioIntentosFallidosPassword, int cantidadIntentosFallidosPregunta, DateTime inicioIntentosFallidosPregunta, bool estaAprobadao, bool estaBloqueado, DateTime ultimoBloqueo, DateTime registrado)
+        public bool Test()
         {
-            try {}
+            return true;
+        }
+
+        public void RegistrarUsuario(Guid providerUserKey, string aplicacion, string login, string password,
+                                     string email, string preguntaPassword, string respuestaPassword, string comentario,
+                                     DateTime ultimaActividad, DateTime ultimaSesion, DateTime ultimoCambioDePassword,
+                                     int cantidadIntentosFaillidosPassword, DateTime inicioIntentosFallidosPassword,
+                                     int cantidadIntentosFallidosPregunta, DateTime inicioIntentosFallidosPregunta,
+                                     bool estaAprobadao, bool estaBloqueado, DateTime ultimoBloqueo, DateTime registrado)
+        {
+            try
+            {
+            }
             catch (Exception exception)
             {
                 const string mensajeDeError = "Ha ocurrido un error mientras se trataba de registrar el usuario.";
@@ -44,7 +60,8 @@ namespace Sci.Nlayer.ServiciosDistribuidos.ModuloPrincipal.Providers
             }
             catch (Exception exception)
             {
-                const string mensajeDeError = "Ha ocurrido un error mientras se trataba de obtener el login del usuario por email.";
+                const string mensajeDeError =
+                    "Ha ocurrido un error mientras se trataba de obtener el login del usuario por email.";
 
                 IManejadorDeLogs manejadorDeLogs = FabricaIoC.Resolver<IManejadorDeLogs>();
                 manejadorDeLogs.PublicarMensajeSql(aplicacion, mensajeDeError, exception);

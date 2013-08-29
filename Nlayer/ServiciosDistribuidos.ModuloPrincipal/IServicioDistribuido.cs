@@ -1,14 +1,14 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IServicioDistribuido.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="IServicioDistribuido.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 //  -----------------------------------------------------------------------
 
 using System.ServiceModel;
-using Sci.Nlayer.ServiciosDistribuidos.Nucleo.ManejoDeErrores;
+using Nlayer.Nlayer.ServiciosDistribuidos.Nucleo.ManejoDeErrores;
 
-namespace Sci.Nlayer.ServiciosDistribuidos.ModuloPrincipal
+namespace Nlayer.Nlayer.ServiciosDistribuidos.ModuloPrincipal
 {
     [ServiceContract]
     public interface IServicioDistribuido

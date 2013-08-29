@@ -8,7 +8,7 @@
     <ProjectGuid>{711E1934-2B67-4F44-BB55-ECC3E19E7866}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sci.Nlayer.ServiciosDistribuidos.ModuloPrincipal</RootNamespace>
+    <RootNamespace>Nlayer.Nlayer.ServiciosDistribuidos.ModuloPrincipal</RootNamespace>
     <AssemblyName>Sci.Nlayer.ServiciosDistribuidos.ModuloPrincipal</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

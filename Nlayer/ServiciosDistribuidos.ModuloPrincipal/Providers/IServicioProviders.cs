@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IServicioProviders.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="IServicioProviders.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 //  -----------------------------------------------------------------------
@@ -8,9 +8,9 @@
 using System;
 using System.Data;
 using System.ServiceModel;
-using Sci.Nlayer.ServiciosDistribuidos.Nucleo.ManejoDeErrores;
+using Nlayer.Nlayer.ServiciosDistribuidos.Nucleo.ManejoDeErrores;
 
-namespace Sci.Nlayer.ServiciosDistribuidos.ModuloPrincipal.Providers
+namespace Nlayer.Nlayer.ServiciosDistribuidos.ModuloPrincipal.Providers
 {
     [ServiceContract]
     public interface IServicioProviders
