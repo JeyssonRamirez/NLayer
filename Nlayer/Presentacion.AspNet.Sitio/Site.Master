@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Sitio.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Sitio.SiteMaster" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
@@ -64,7 +64,7 @@
                     <div class="l"></div>
                     <div class="r"></div>
                     <asp:SiteMapDataSource ShowStartingNode="false" ID="siteMapDataSource" runat="server"
-                        SiteMapProvider="SCISiteMapProvider" />
+                        SiteMapProvider="NlayerSiteMapProvider" />
                     <asp:Repeater ID="siteMapRepeater" runat="server" DataSourceID="siteMapDataSource">
                         <HeaderTemplate>
                             <ul class="art-menu">
@@ -77,7 +77,7 @@
                                     <span class="t">
                                         <%# Eval("Title") %></span></a>
                                 <asp:SiteMapDataSource ShowStartingNode="false" ID="dosSiteMapDataSource" StartFromCurrentNode="false"
-                                    StartingNodeUrl='<%# Eval("Url") %>' runat="server" SiteMapProvider="SCISiteMapProvider" />
+                                    StartingNodeUrl='<%# Eval("Url") %>' runat="server" SiteMapProvider="NlayerSiteMapProvider" />
                                 <asp:Repeater ID="Repeater1" runat="server" DataSourceID="dosSiteMapDataSource">
                                     <HeaderTemplate>
                                         <ul>
@@ -87,7 +87,7 @@
                                             <a href='<%# ResolverUrl(Eval("Url")) %>'>
                                                 <%# Eval("Title") %></a>
                                             <asp:SiteMapDataSource ShowStartingNode="false" ID="tresSiteMapDataSource" StartFromCurrentNode="false"
-                                                StartingNodeUrl='<%# Eval("Url") %>' runat="server" SiteMapProvider="SCISiteMapProvider" />
+                                                StartingNodeUrl='<%# Eval("Url") %>' runat="server" SiteMapProvider="NlayerSiteMapProvider" />
                                             <asp:Repeater ID="Repeater2" runat="server" DataSourceID="tresSiteMapDataSource">
                                                 <HeaderTemplate>
                                                     <ul>
@@ -142,8 +142,8 @@
                     <div class="art-footer-r"></div>
                     <div class="art-footer-body">
                         <div class="art-footer-text">
-                            <p>SCI NLayer Template</p>
-                            <p>Copyright © SCI Software 2011. Todos los derechos reservados.</p>
+                            <p>Nlayer NLayer Template</p>
+                            <p>Copyright © Nlayer Software 2011. Todos los derechos reservados.</p>
                         </div>
                         <div class="cleared"></div>
                     </div>

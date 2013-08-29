@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Recuperar.aspx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Sitio.Cuentas.Recuperar" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Recuperar.aspx.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Sitio.Cuentas.Recuperar" %>
 <asp:Content ID="header" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="MainContent" runat="server">
@@ -6,7 +6,7 @@
     </asp:ScriptManagerProxy>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <asp:PasswordRecovery ID="PasswordRecovery1" runat="server" MembershipProvider="SCIMembershipProvider"
+            <asp:PasswordRecovery ID="PasswordRecovery1" runat="server" MembershipProvider="NlayerMembershipProvider"
                 AnswerLabelText="Respuesta:" AnswerRequiredErrorMessage="Es necesario responder."
                 GeneralFailureText="Su intento de recuperar la contraseña no se ha realizado correctamente. Por favor, inténtalo de nuevo."
                 QuestionFailureText="Su respuesta no pudo ser verificada. Por favor, inténtalo de nuevo."

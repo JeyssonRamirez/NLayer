@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="IniciarSesion.aspx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Sitio.Cuentas.IniciarSesion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="IniciarSesion.aspx.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Sitio.Cuentas.IniciarSesion" %>
 
 <asp:Content ID="header" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
@@ -7,7 +7,7 @@
     </asp:ScriptManagerProxy>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <asp:Login ID="Login1" runat="server" MembershipProvider="SCIMembershipProvider"
+            <asp:Login ID="Login1" runat="server" MembershipProvider="NlayerMembershipProvider"
                 FailureText="Su intento de conexión no se ha realizado correctamente. Por favor, inténtalo de nuevo."
                 LoginButtonText="Entrar" PasswordLabelText="contraseña:" PasswordRequiredErrorMessage="Se requiere contraseña."
                 RememberMeText="Recordarme la próxima vez." TitleText="Entrar" UserNameLabelText="Nombre de Usuario:"

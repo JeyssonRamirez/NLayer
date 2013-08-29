@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sci.Nlayer.Presentacion.AspNet.Sitio {
+namespace Nlayer.Nlayer.Presentacion.AspNet.Sitio {
     
     
     public partial class SiteMaster {

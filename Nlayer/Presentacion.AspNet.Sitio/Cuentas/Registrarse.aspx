@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registrarse.aspx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Sitio.Cuentas.Registrarse" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registrarse.aspx.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Sitio.Cuentas.Registrarse" %>
 <asp:Content ID="header" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" MembershipProvider="SCIMembershipProvider"
+    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" MembershipProvider="NlayerMembershipProvider"
         OnCreatedUser="CreatedUser" AnswerLabelText="Respuesta de seguridad:" AnswerRequiredErrorMessage="Respuesta de seguridad es necesaria."
         CancelButtonText="Cancelar" CompleteSuccessText="Su cuenta ha sido creada con éxito."
         ConfirmPasswordCompareErrorMessage="La contraseña y la contraseña de confirmación deben coincidir."

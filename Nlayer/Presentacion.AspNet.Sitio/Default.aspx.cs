@@ -1,30 +1,25 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="Default.aspx.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
-// </copyright>
-// <author>Jhonnys López Celedon</author>
-//  -----------------------------------------------------------------------
+﻿//   -----------------------------------------------------------------------
+//   <copyright file=Default.aspx.cs company="Banlinea">
+//       Copyright (c) Banlinea Todos los derechos reservados.
+//   </copyright>
+//   <author>Jeysson Stevens  Ramirez </author>
+//   <Date>  2013 -08-29  - 11:16 a.m.</Date>
+//   <Update> 2013-08-29 - 12:34 p.m.</Update>
+//   -----------------------------------------------------------------------
+
+#region
 
 using System;
-using System.ServiceModel;
 using System.Web.UI;
-using Sci.Nlayer.Presentacion.AgenteDeServicios;
-using Sci.Nlayer.Presentacion.AgenteDeServicios.Proxies.ServicioProviders;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Sitio
+#endregion
+
+namespace Nlayer.Nlayer.Presentacion.AspNet.Sitio
 {
     public partial class Default : Page
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            IServicioProviders var = LocalizadorProxy.ServicioProviders;
-            try
-            {
-                var x = var.ObtenerLoginPorEmail("", "");                
-            }
-            catch (FaultException<ErrorServicio> ex)
-            {
-            }
         }
     }
 }

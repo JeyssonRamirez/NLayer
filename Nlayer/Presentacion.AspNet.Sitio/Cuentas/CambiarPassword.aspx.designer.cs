@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sci.Nlayer.Presentacion.AspNet.Sitio.Cuentas {
+namespace Nlayer.Nlayer.Presentacion.AspNet.Sitio.Cuentas {
     
     
     public partial class CambiarPassword {

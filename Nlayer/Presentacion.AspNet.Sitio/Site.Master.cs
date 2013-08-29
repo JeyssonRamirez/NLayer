@@ -1,13 +1,13 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Site.Master.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="Site.Master.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 // -----------------------------------------------------------------------
 
 using System.Web.UI;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Sitio
+namespace Nlayer.Nlayer.Presentacion.AspNet.Sitio
 {
     public partial class SiteMaster : MasterPage
     {

@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Global.asax.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="Global.asax.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 //  -----------------------------------------------------------------------
@@ -8,7 +8,7 @@
 using System;
 using System.Web;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Sitio
+namespace Nlayer.Nlayer.Presentacion.AspNet.Sitio
 {
     public class Global : HttpApplication
     {
