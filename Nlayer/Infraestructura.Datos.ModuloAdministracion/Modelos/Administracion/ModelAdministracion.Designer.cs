@@ -8,30 +8,31 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("Modelos", "FK_Membresia_Aplicacion", "Aplicacion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Aplicacion), "Membresia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Membresia), true)]
-[assembly: EdmRelationshipAttribute("Modelos", "FK_Perfil_Aplicacion", "Aplicacion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Aplicacion), "Perfil", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Perfil), true)]
-[assembly: EdmRelationshipAttribute("Modelos", "FK_Membresia_Usuario", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Usuario), "Membresia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Membresia), true)]
-[assembly: EdmRelationshipAttribute("Modelos", "FK_Perfil_Usuario", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Usuario), "Perfil", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Perfil), true)]
-[assembly: EdmRelationshipAttribute("Modelos", "FK_RolPropiedad_Propiedad", "Propiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Propiedad), "RolPropiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.RolPropiedad), true)]
-[assembly: EdmRelationshipAttribute("Modelos", "FK_ValorPropiedad_Propiedad", "Propiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Propiedad), "ValorPropiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.ValorPropiedad), true)]
-[assembly: EdmRelationshipAttribute("Modelos", "FK_RolPropiedad_Rol", "Rol", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Rol), "RolPropiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.RolPropiedad), true)]
-[assembly: EdmRelationshipAttribute("Modelos", "FK_RolUsuario_Rol", "Rol", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Rol), "RolUsuario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.RolUsuario), true)]
-[assembly: EdmRelationshipAttribute("Modelos", "FK_RolUsuario_Usuario", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Usuario), "RolUsuario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.RolUsuario), true)]
-[assembly: EdmRelationshipAttribute("Modelos", "FK_ValorPropiedad_Usuario", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Usuario), "ValorPropiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.ValorPropiedad), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_Membresia_Aplicacion", "Aplicacion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Aplicacion), "Membresia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Membresia), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_Perfil_Aplicacion", "Aplicacion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Aplicacion), "Perfil", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Perfil), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_Membresia_Usuario", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Usuario), "Membresia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Membresia), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_Perfil_Usuario", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Usuario), "Perfil", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Perfil), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_RolPropiedad_Propiedad", "Propiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Propiedad), "RolPropiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.RolPropiedad), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_ValorPropiedad_Propiedad", "Propiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Propiedad), "ValorPropiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.ValorPropiedad), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_RolPropiedad_Rol", "Rol", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Rol), "RolPropiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.RolPropiedad), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_RolUsuario_Rol", "Rol", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Rol), "RolUsuario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.RolUsuario), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_RolUsuario_Usuario", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Usuario), "RolUsuario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.RolUsuario), true)]
+[assembly: EdmRelationshipAttribute("Modelos", "FK_ValorPropiedad_Usuario", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.Usuario), "ValorPropiedad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion.ValorPropiedad), true)]
 
 #endregion
 
-namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion
+namespace Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion
 {
     #region Contexts
     
@@ -256,6 +257,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         private ObjectSet<ValorPropiedad> _ValorPropiedad;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -347,11 +349,11 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -378,6 +380,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -432,6 +435,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnNombreChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -480,6 +484,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -504,6 +509,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -654,6 +660,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnRegistradoChanged();
 
         #endregion
+
     
     }
     
@@ -709,6 +716,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1171,6 +1179,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnRegistradoChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1251,6 +1260,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1283,6 +1293,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1409,6 +1420,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnUltimaActualizacionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1489,6 +1501,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1517,6 +1530,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1595,6 +1609,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnTipoChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1643,6 +1658,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1671,6 +1687,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1749,6 +1766,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnNombreChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1797,6 +1815,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1825,6 +1844,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1903,6 +1923,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnPropiedadIdChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1983,6 +2004,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2011,6 +2033,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2089,6 +2112,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnRolIdChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2169,6 +2193,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2199,6 +2224,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2397,6 +2423,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnActivoChanged();
 
         #endregion
+
     
     }
     
@@ -2426,6 +2453,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2504,6 +2532,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnLoginChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2596,6 +2625,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2624,6 +2654,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2705,6 +2736,7 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         partial void OnValorChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2785,8 +2817,10 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administ
         }
 
         #endregion
+
     }
 
     #endregion
+
     
 }

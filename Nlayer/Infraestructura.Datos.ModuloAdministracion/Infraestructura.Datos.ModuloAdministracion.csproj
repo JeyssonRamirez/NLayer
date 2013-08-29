@@ -8,7 +8,7 @@
     <ProjectGuid>{273D460D-D84F-446C-AF8D-D13F3CE48308}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion</RootNamespace>
+    <RootNamespace>Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion</RootNamespace>
     <AssemblyName>Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -54,22 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modelos\Administracion\Aplicacion.Metadata.cs" />
-    <Compile Include="Modelos\Administracion\ErrorAplicacion.Metadata.cs" />
-    <Compile Include="Modelos\Administracion\Membresia.Metadata.cs" />
+    <Compile Include="Modelos\Administracion\Aplicacion.cs" />
+    <Compile Include="Modelos\Administracion\ErrorAplicacion.cs" />
+    <Compile Include="Modelos\Administracion\Membresia.cs" />
     <Compile Include="Modelos\Administracion\ModelAdministracion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAdministracion.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\Administracion\Perfil.Metadata.cs" />
-    <Compile Include="Modelos\Administracion\Propiedad.Metadata.cs" />
-    <Compile Include="Modelos\Administracion\Rol.Metadata.cs" />
-    <Compile Include="Modelos\Administracion\RolPropiedad.Metadata.cs" />
-    <Compile Include="Modelos\Administracion\RolUsuario.Metadata.cs" />
-    <Compile Include="Modelos\Administracion\SiteMap.Metadata.cs" />
-    <Compile Include="Modelos\Administracion\Usuario.Metadata.cs" />
-    <Compile Include="Modelos\Administracion\ValorPropiedad.Metadata.cs" />
+    <Compile Include="Modelos\Administracion\Perfil.cs" />
+    <Compile Include="Modelos\Administracion\Propiedad.cs" />
+    <Compile Include="Modelos\Administracion\Rol.cs" />
+    <Compile Include="Modelos\Administracion\RolPropiedad.cs" />
+    <Compile Include="Modelos\Administracion\RolUsuario.cs" />
+    <Compile Include="Modelos\Administracion\SiteMap.cs" />
+    <Compile Include="Modelos\Administracion\Usuario.cs" />
+    <Compile Include="Modelos\Administracion\ValorPropiedad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
