@@ -66,10 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SciProfileProvider.cs" />
-    <Compile Include="SciRoleProvider.cs" />
-    <Compile Include="SciSiteMapProvider.cs" />
-    <Compile Include="SciMembershipProvider.cs" />
+    <Compile Include="NlayerProfileProvider.cs" />
+    <Compile Include="NlayerRoleProvider.cs" />
+    <Compile Include="NlayerSiteMapProvider.cs" />
+    <Compile Include="NlayerMembershipProvider.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

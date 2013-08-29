@@ -1,8 +1,8 @@
 ﻿#region Signature
 
 //   -----------------------------------------------------------------------
-//   <copyright file=SciSiteMapProvider.cs company="SCI Software">
-//       Copyright (c) SCI Software Todos los derechos reservados.
+//   <copyright file=NlayerSiteMapProvider.cs company="Nlayer Software">
+//       Copyright (c) Nlayer Software Todos los derechos reservados.
 //   </copyright>
 //   <author>Jeysson Stevens  Ramirez </author>
 //   <Date>  2012 -02-25  - 01:48 p.m.</Date>
@@ -31,7 +31,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 namespace Nlayer.Infraestructura.Transversales.Proveedores
 {
     [AspNetHostingPermission(SecurityAction.Demand, Unrestricted = true, Level = AspNetHostingPermissionLevel.Minimal)]
-    public class SciSiteMapProvider : StaticSiteMapProvider
+    public class NlayerSiteMapProvider : StaticSiteMapProvider
     {
         private readonly IDictionary<int, SiteMapNode> _nodos = new Dictionary<int, SiteMapNode>();
         private string _applicationName;
@@ -125,7 +125,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
                     Clear();
 
                     SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-                    DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerSiteMap");
+                    DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerSiteMap");
 
                     sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
 

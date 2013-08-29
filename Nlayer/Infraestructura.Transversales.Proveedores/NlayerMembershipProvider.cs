@@ -1,8 +1,8 @@
 ﻿#region Signature
 
 //   -----------------------------------------------------------------------
-//   <copyright file=SciMembershipProvider.cs company="SCI Software">
-//       Copyright (c) SCI Software Todos los derechos reservados.
+//   <copyright file=NlayerMembershipProvider.cs company="Nlayer Software">
+//       Copyright (c) Nlayer Software Todos los derechos reservados.
 //   </copyright>
 //   <author>Jeysson Stevens  Ramirez </author>
 //   <Date>  2012 -02-25  - 01:48 p.m.</Date>
@@ -33,7 +33,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 namespace Nlayer.Infraestructura.Transversales.Proveedores
 {
     [AspNetHostingPermission(SecurityAction.Demand, Unrestricted = true, Level = AspNetHostingPermissionLevel.Minimal)]
-    public sealed class SciMembershipProvider : MembershipProvider
+    public sealed class NlayerMembershipProvider : MembershipProvider
     {
         private const int NewPasswordLength = 6;
         private string _applicationName;
@@ -127,13 +127,13 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
 
             if (string.IsNullOrEmpty(name))
             {
-                name = "SciMembershipProvider";
+                name = "NlayerMembershipProvider";
             }
 
             if (String.IsNullOrEmpty(config["description"]))
             {
                 config.Remove("description");
-                config.Add("description", "Sci Membership Provider");
+                config.Add("description", "Nlayer Membership Provider");
             }
 
             base.Initialize(name, config);
@@ -228,7 +228,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
                 }
 
                 SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-                DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_RegistrarUsuario");
+                DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_RegistrarUsuario");
 
                 sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
                 sqlDatabase.AddInParameter(dbCommand, "ProviderUserKey", DbType.Guid, providerUserKey);
@@ -275,7 +275,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             }
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ActualizarPreguntaYRespuesta");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ActualizarPreguntaYRespuesta");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.Guid, username);
@@ -323,7 +323,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             }
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ActualizarPasswordUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ActualizarPasswordUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, username);
@@ -364,7 +364,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             }
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ResetearPasswordUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ResetearPasswordUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, username);
@@ -396,7 +396,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override void UpdateUser(MembershipUser user)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ActualizarUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ActualizarUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Email", DbType.String, user.Email);
@@ -412,7 +412,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             bool esValido;
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ValidarUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ValidarUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, username);
@@ -464,7 +464,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override bool UnlockUser(string userName)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_BloquearUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_BloquearUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Bloquear", DbType.Boolean, false);
@@ -483,7 +483,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override MembershipUser GetUser(object providerUserKey, bool userIsOnline)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerUsuarioPorProviderUserKey");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerUsuarioPorProviderUserKey");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "ProviderUserKey", DbType.Guid, providerUserKey);
@@ -503,7 +503,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override MembershipUser GetUser(string username, bool userIsOnline)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerUsuarioPorLogin");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerUsuarioPorLogin");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, username);
@@ -553,7 +553,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override string GetUserNameByEmail(string email)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerUsuarioPorEmail");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerUsuarioPorEmail");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Email", DbType.String, email);
@@ -572,7 +572,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override bool DeleteUser(string username, bool deleteAllRelatedData)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_EliminarUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_EliminarUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, username);
@@ -585,7 +585,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, out int totalRecords)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerUsuarios");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerUsuarios");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Inicio", DbType.Int32, pageIndex);
@@ -613,7 +613,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             DateTime compareTime = DateTime.Now.Subtract(onlineSpan);
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerTotalUsuariosEnLinea");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerTotalUsuariosEnLinea");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "FechaComparacion", DbType.DateTime, compareTime);
@@ -627,7 +627,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
                                                                  out int totalRecords)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerUsuariosPorLogin");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerUsuariosPorLogin");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, usernameToMatch);
@@ -654,7 +654,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
                                                                   out int totalRecords)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerUsuariosPorEmail");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerUsuariosPorEmail");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Email", DbType.String, emailToMatch);

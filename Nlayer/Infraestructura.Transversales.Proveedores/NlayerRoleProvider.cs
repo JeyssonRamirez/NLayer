@@ -1,8 +1,8 @@
 ﻿#region Signature
 
 //   -----------------------------------------------------------------------
-//   <copyright file=SciRoleProvider.cs company="SCI Software">
-//       Copyright (c) SCI Software Todos los derechos reservados.
+//   <copyright file=NlayerRoleProvider.cs company="Nlayer Software">
+//       Copyright (c) Nlayer Software Todos los derechos reservados.
 //   </copyright>
 //   <author>Jeysson Stevens  Ramirez </author>
 //   <Date>  2012 -02-25  - 01:48 p.m.</Date>
@@ -31,7 +31,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 namespace Nlayer.Infraestructura.Transversales.Proveedores
 {
     [AspNetHostingPermission(SecurityAction.Demand, Unrestricted = true, Level = AspNetHostingPermissionLevel.Minimal)]
-    public class SciRoleProvider : RoleProvider
+    public class NlayerRoleProvider : RoleProvider
     {
         private string _applicationName;
         private string _connectionString;
@@ -52,13 +52,13 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
 
             if (string.IsNullOrEmpty(name))
             {
-                name = "SciRoleProvider";
+                name = "NlayerRoleProvider";
             }
 
             if (String.IsNullOrEmpty(config["description"]))
             {
                 config.Remove("description");
-                config.Add("description", "SCI Role Provider");
+                config.Add("description", "Nlayer Role Provider");
             }
 
             base.Initialize(name, config);
@@ -86,7 +86,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override bool IsUserInRole(string username, string roleName)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_EstaElUsuarioEnElRol");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_EstaElUsuarioEnElRol");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, username);
@@ -100,7 +100,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             string roles = string.Empty;
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerRolesUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerRolesUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, username);
@@ -126,7 +126,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override void CreateRole(string roleName)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_RegistrarRol");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_RegistrarRol");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Nombre", DbType.String, roleName);
@@ -138,7 +138,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override bool DeleteRole(string roleName, bool throwOnPopulatedRole)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_EliminarRol");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_EliminarRol");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Nombre", DbType.String, roleName);
@@ -151,7 +151,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override bool RoleExists(string roleName)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ExisteRol");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ExisteRol");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Nombre", DbType.String, roleName);
@@ -176,7 +176,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             }
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_RegistrarUsuariosEnRoles");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_RegistrarUsuariosEnRoles");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Usuarios", DbType.Xml, usuariosXml.ToString());
@@ -200,7 +200,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             }
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_EliminarUsuariosDeRoles");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_EliminarUsuariosDeRoles");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Usuarios", DbType.Xml, usuariosXml.ToString());
@@ -213,7 +213,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override string[] GetUsersInRole(string roleName)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerUsuariosPorRol");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerUsuariosPorRol");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Rol", DbType.String, roleName);
@@ -240,7 +240,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override string[] GetAllRoles()
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerRoles");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerRoles");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
 
@@ -266,7 +266,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
         public override string[] FindUsersInRole(string roleName, string usernameToMatch)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerUsuariosEnRol");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerUsuariosEnRol");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Rol", DbType.String, roleName);

@@ -1,8 +1,8 @@
 ﻿#region Signature
 
 //   -----------------------------------------------------------------------
-//   <copyright file=SciProfileProvider.cs company="SCI Software">
-//       Copyright (c) SCI Software Todos los derechos reservados.
+//   <copyright file=NlayerProfileProvider.cs company="Nlayer Software">
+//       Copyright (c) Nlayer Software Todos los derechos reservados.
 //   </copyright>
 //   <author>Jeysson Stevens  Ramirez </author>
 //   <Date>  2012 -02-25  - 01:48 p.m.</Date>
@@ -31,7 +31,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 namespace Nlayer.Infraestructura.Transversales.Proveedores
 {
     [AspNetHostingPermission(SecurityAction.Demand, Unrestricted = true, Level = AspNetHostingPermissionLevel.Minimal)]
-    public class SciProfileProvider : ProfileProvider
+    public class NlayerProfileProvider : ProfileProvider
     {
         private string _applicationName;
         private string _connectionString;
@@ -46,13 +46,13 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
 
             if (string.IsNullOrEmpty(name))
             {
-                name = "SciProfileProvider";
+                name = "NlayerProfileProvider";
             }
 
             if (String.IsNullOrEmpty(config["description"]))
             {
                 config.Remove("description");
-                config.Add("description", "SCI Profile Provider");
+                config.Add("description", "Nlayer Profile Provider");
             }
 
             base.Initialize(name, config);
@@ -134,7 +134,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             }
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerPerfilUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerPerfilUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, username);
@@ -170,7 +170,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             }
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_RegistrarValorPropiedad");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_RegistrarValorPropiedad");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, username);
@@ -194,7 +194,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             }
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_EliminarPerfil");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_EliminarPerfil");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Perfiles", DbType.Xml, perfilesXml.ToString());
@@ -213,7 +213,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             }
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_EliminarPerfil");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_EliminarPerfil");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Perfiles", DbType.Xml, perfilesXml.ToString());
@@ -227,7 +227,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
                                                    DateTime userInactiveSinceDate)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_EliminarPerfilesInactivos");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_EliminarPerfilesInactivos");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "UltimaActividad", DbType.DateTime, userInactiveSinceDate);
@@ -241,7 +241,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
                                                         DateTime userInactiveSinceDate)
         {
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ActualizarUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ActualizarUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "UltimaActividad", DbType.DateTime, userInactiveSinceDate);
@@ -257,7 +257,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             CheckParameters(pageIndex, pageSize);
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerPerfiles");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerPerfiles");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "Inicio", DbType.Int32, pageIndex);
@@ -287,7 +287,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             CheckParameters(pageIndex, pageSize);
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerPerfilesInactivos");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerPerfilesInactivos");
 
             sqlDatabase.AddInParameter(dbCommand, "Aplicacion", DbType.String, _applicationName);
             sqlDatabase.AddInParameter(dbCommand, "UltimaActividad", DbType.Date, userInactiveSinceDate);
@@ -318,7 +318,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             CheckParameters(pageIndex, pageSize);
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerPerfilesPorUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerPerfilesPorUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, usernameToMatch);
             sqlDatabase.AddInParameter(dbCommand, "Inicio", DbType.Int32, pageIndex);
@@ -348,7 +348,7 @@ namespace Nlayer.Infraestructura.Transversales.Proveedores
             CheckParameters(pageIndex, pageSize);
 
             SqlDatabase sqlDatabase = new SqlDatabase(_connectionString);
-            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.SCISP_ObtenerPerfilesInactivosPorUsuario");
+            DbCommand dbCommand = sqlDatabase.GetStoredProcCommand("adm.NlayerSP_ObtenerPerfilesInactivosPorUsuario");
 
             sqlDatabase.AddInParameter(dbCommand, "Login", DbType.String, usernameToMatch);
             sqlDatabase.AddInParameter(dbCommand, "UltimaActividad", DbType.Date, userInactiveSinceDate);
