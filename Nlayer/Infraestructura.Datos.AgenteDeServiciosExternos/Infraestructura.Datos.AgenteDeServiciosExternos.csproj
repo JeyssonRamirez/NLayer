@@ -8,7 +8,7 @@
     <ProjectGuid>{A73B97AF-B6D7-49FD-AAA2-FD3F5563B84F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sci.Nlayer.Infraestructura.Datos.AgenteDeServiciosExternos</RootNamespace>
+    <RootNamespace>Nlayer.Nlayer.Infraestructura.Datos.AgenteDeServiciosExternos</RootNamespace>
     <AssemblyName>Sci.Nlayer.Infraestructura.Datos.AgenteDeServiciosExternos</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
