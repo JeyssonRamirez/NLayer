@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IRepositorio.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="IRepositorio.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // -----------------------------------------------------------------------
@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Sci.Nlayer.Dominio.Nucleo
+namespace Nlayer.Nlayer.Dominio.Nucleo
 {
     /// <summary>
     ///   Contrato base para todos los repositorios de la aplicación.

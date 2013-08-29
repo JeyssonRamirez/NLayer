@@ -1,14 +1,14 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IUnidadDeTrabajo.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="IUnidadDeTrabajo.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // -----------------------------------------------------------------------
 
 using System;
-using Sci.Nlayer.Dominio.ModuloPrincipal.Entidades;
+using Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades;
 
-namespace Sci.Nlayer.Dominio.Nucleo
+namespace Nlayer.Nlayer.Dominio.Nucleo
 {
     public interface IUnidadDeTrabajo : IDisposable
     {
