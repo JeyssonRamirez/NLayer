@@ -28,7 +28,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 
 #endregion
 
-namespace Sci.Nlayer.Infraestructura.Transversales.Proveedores
+namespace Nlayer.Infraestructura.Transversales.Proveedores
 {
     [AspNetHostingPermission(SecurityAction.Demand, Unrestricted = true, Level = AspNetHostingPermissionLevel.Minimal)]
     public class SciSiteMapProvider : StaticSiteMapProvider

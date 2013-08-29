@@ -8,7 +8,7 @@
     <ProjectGuid>{AEBFBB20-805B-44D4-8531-1FF4D81A4448}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sci.Nlayer.Infraestructura.Transversales.Proveedores</RootNamespace>
+    <RootNamespace>Nlayer.Infraestructura.Transversales.Proveedores</RootNamespace>
     <AssemblyName>Sci.Nlayer.Infraestructura.Transversales.Proveedores</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
