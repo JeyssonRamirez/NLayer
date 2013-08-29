@@ -1,13 +1,13 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IManejadorDeCorreos.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="IManejadorDeCorreos.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // -----------------------------------------------------------------------
 
 using System.Collections.Generic;
 
-namespace Sci.Nlayer.Infraestructura.Transversales.Correos
+namespace Nlayer.Nlayer.Infraestructura.Transversales.Correos
 {
     public interface IManejadorDeCorreos
     {

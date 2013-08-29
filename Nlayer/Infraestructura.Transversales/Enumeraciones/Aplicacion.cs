@@ -1,13 +1,13 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Aplicacion.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="Aplicacion.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 //  -----------------------------------------------------------------------
 
 using System.ComponentModel;
 
-namespace Sci.Nlayer.Infraestructura.Transversales.Enumeraciones
+namespace Nlayer.Nlayer.Infraestructura.Transversales.Enumeraciones
 {
     public enum Aplicacion
     {

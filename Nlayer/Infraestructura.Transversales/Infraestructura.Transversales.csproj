@@ -8,7 +8,7 @@
     <ProjectGuid>{B98745B0-AB2F-4558-82A5-2D0373F0A9C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sci.Nlayer.Infraestructura.Transversales</RootNamespace>
+    <RootNamespace>Nlayer.Nlayer.Infraestructura.Transversales</RootNamespace>
     <AssemblyName>Sci.Nlayer.Infraestructura.Transversales</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

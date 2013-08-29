@@ -1,13 +1,13 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IManejadorDeLogs.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="IManejadorDeLogs.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 //  -----------------------------------------------------------------------
 
 using System;
 
-namespace Sci.Nlayer.Infraestructura.Transversales.Logging
+namespace Nlayer.Nlayer.Infraestructura.Transversales.Logging
 {
     public interface IManejadorDeLogs
     {
