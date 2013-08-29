@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="NodosSiteMap_Edit.ascx.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="NodosSiteMap_Edit.ascx.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 //  -----------------------------------------------------------------------
@@ -10,9 +10,9 @@ using System.Collections.Specialized;
 using System.Web.DynamicData;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion;
+using Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates
 {
     public partial class NodosSiteMap_EditField : FieldTemplateUserControl
     {

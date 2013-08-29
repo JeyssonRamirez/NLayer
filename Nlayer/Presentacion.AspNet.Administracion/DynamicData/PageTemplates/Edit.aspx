@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.master" CodeBehind="Edit.aspx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.PageTemplates.Edit" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.master" CodeBehind="Edit.aspx.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.PageTemplates.Edit" %>
 
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="Server">
 </asp:Content>

@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Decimal_Edit.ascx.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="Decimal_Edit.ascx.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 //  -----------------------------------------------------------------------
@@ -10,7 +10,7 @@ using System.Collections.Specialized;
 using System.Web.DynamicData;
 using System.Web.UI;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates
 {
     public partial class Decimal_EditField : FieldTemplateUserControl
     {

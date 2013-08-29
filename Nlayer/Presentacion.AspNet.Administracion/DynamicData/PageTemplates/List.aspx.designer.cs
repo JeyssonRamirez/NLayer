@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.PageTemplates {
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.PageTemplates {
     
     
     public partial class List {

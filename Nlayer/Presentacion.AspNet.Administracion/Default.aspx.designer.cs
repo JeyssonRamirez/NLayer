@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion {
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion {
     
     
     public partial class Default {

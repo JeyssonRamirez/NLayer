@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.master" CodeBehind="Details.aspx.cs"
-    Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.PageTemplates.Details" %>
+    Inherits="Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.PageTemplates.Details" %>
 
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="Server">
 </asp:Content>

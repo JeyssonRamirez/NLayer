@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.Filters {
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.Filters {
     
     
     public partial class BooleanFilter {

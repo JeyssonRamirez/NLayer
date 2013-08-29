@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" CodeBehind="Aplicaciones_Edit.ascx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates.Aplicaciones_EditField" %>
+﻿<%@ Control Language="C#" CodeBehind="Aplicaciones_Edit.ascx.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates.Aplicaciones_EditField" %>
 <asp:DropDownList ID="aplicacionesDropDownList" runat="server">
 </asp:DropDownList>
 <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator1" ControlToValidate="aplicacionesDropDownList"

@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Enumeration.ascx.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="Enumeration.ascx.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // <date>16/07/2011 12:39 p.m.</date>
@@ -12,7 +12,7 @@ using System.Reflection;
 using System.Web.DynamicData;
 using System.Web.UI;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates
 {
     public partial class EnumerationField : FieldTemplateUserControl
     {

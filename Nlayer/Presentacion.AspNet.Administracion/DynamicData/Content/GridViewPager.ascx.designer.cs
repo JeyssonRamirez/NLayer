@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.Content {
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.Content {
     
     
     public partial class GridViewPager {

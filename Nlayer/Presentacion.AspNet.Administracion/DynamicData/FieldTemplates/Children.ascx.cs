@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Children.ascx.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="Children.ascx.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // <date>13/07/2011 01:54 p.m.</date>
@@ -10,7 +10,7 @@ using System;
 using System.Web.DynamicData;
 using System.Web.UI;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates
 {
     public partial class ChildrenField : FieldTemplateUserControl
     {

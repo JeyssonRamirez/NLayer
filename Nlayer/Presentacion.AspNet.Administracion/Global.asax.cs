@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Global.asax.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="Global.asax.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 //  -----------------------------------------------------------------------
@@ -9,9 +9,9 @@ using System;
 using System.Web;
 using System.Web.DynamicData;
 using System.Web.Routing;
-using Sci.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion;
+using Nlayer.Nlayer.Infraestructura.Datos.ModuloAdministracion.Modelos.Administracion;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion
 {
     public class Global : HttpApplication
     {

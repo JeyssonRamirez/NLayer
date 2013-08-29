@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" CodeBehind="Integer_Edit.ascx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates.Integer_EditField" %>
+﻿<%@ Control Language="C#" CodeBehind="Integer_Edit.ascx.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates.Integer_EditField" %>
 <asp:TextBox ID="TextBox1" runat="server" Text="<%#FieldValueEditString%>" Columns="10"></asp:TextBox>
 <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator1" ControlToValidate="TextBox1" Display="Static" Enabled="false" />
 <asp:CompareValidator runat="server" ID="CompareValidator1"  ControlToValidate="TextBox1" Display="Static" Operator="DataTypeCheck" Type="Integer" />

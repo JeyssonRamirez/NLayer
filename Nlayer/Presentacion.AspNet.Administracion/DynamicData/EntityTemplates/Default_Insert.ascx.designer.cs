@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.EntityTemplates {
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.EntityTemplates {
     
     
     public partial class Default_InsertEntityTemplate {

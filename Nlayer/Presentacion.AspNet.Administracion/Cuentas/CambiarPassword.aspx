@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="CambiarPassword.aspx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.Cuentas.CambiarPassword" %>
+    CodeBehind="CambiarPassword.aspx.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Administracion.Cuentas.CambiarPassword" %>
 
 <asp:Content ID="header" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
@@ -8,7 +8,7 @@
     </asp:ScriptManagerProxy>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <asp:ChangePassword ID="ChangePassword1" runat="server" MembershipProvider="SCIMembershipProvider"
+            <asp:ChangePassword ID="ChangePassword1" runat="server" MembershipProvider="NlayerMembershipProvider"
                 CancelButtonText="Cancelar" ChangePasswordButtonText="Cambiar Contraseña" ChangePasswordFailureText="Contraseña incorrecta o Nueva Contraseña no válida. Nuevo mínimo longitud de la contraseña: {0}. Caracteres no alfanuméricos necesarios"
                 ChangePasswordTitleText="Cambie su contraseña" ConfirmNewPasswordLabelText="Confirmar nueva contraseña:"
                 ConfirmPasswordCompareErrorMessage="La Confirmar nueva contraseña debe coincidir con la entrada de la nueva contraseña."

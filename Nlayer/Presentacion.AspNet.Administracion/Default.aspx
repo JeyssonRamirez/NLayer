@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Inicio" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.Default" %>
+    CodeBehind="Default.aspx.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Administracion.Default" %>
 
 <asp:Content ID="header" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>

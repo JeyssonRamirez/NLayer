@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates {
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates {
     
     
     public partial class Enumeration_EditField {

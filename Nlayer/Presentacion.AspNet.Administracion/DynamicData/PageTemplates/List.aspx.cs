@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="List.aspx.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="List.aspx.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // <date>13/07/2011 12:41 p.m.</date>
@@ -12,7 +12,7 @@ using System.Web.Routing;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.PageTemplates
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.PageTemplates
 {
     public partial class List : Page
     {

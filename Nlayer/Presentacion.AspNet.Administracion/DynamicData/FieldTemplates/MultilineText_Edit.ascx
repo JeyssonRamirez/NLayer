@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" CodeBehind="MultilineText_Edit.ascx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates.MultilineText_EditField" %>
+﻿<%@ Control Language="C#" CodeBehind="MultilineText_Edit.ascx.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates.MultilineText_EditField" %>
 
 <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Text='<%#FieldValueEditString%>' Columns="80" Rows="5"></asp:TextBox>
 

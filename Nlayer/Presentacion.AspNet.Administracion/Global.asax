@@ -1,1 +1,1 @@
-﻿<%@ Application Language="C#" CodeBehind="Global.asax.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.Global" %>
+﻿<%@ Application Language="C#" CodeBehind="Global.asax.cs" Inherits="Nlayer.Nlayer.Presentacion.AspNet.Administracion.Global" %>

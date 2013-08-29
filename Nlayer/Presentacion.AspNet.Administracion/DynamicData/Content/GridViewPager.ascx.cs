@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="GridViewPager.ascx.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="GridViewPager.ascx.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // <date>06/07/2011 09:02 p.m.</date>
@@ -11,7 +11,7 @@ using System.Globalization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.Content
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.DynamicData.Content
 {
     public partial class GridViewPager : UserControl
     {

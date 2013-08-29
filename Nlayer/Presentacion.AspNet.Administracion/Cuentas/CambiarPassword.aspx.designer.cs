@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sci.Nlayer.Presentacion.AspNet.Administracion.Cuentas {
+namespace Nlayer.Nlayer.Presentacion.AspNet.Administracion.Cuentas {
     
     
     public partial class CambiarPassword {
