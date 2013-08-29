@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Repositorio.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="Repositorio.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // -----------------------------------------------------------------------
@@ -11,13 +11,13 @@ using System.Data.Objects;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
-using Sci.Nlayer.Infraestructura.Datos.Nucleo.Extensiones;
-using Sci.Nlayer.Dominio.ModuloPrincipal.Entidades;
-using Sci.Nlayer.Dominio.Nucleo;
-using Sci.Nlayer.Infraestructura.Datos.Nucleo.Recursos;
-using Sci.Nlayer.Infraestructura.Transversales.Logging;
+using Nlayer.Nlayer.Infraestructura.Datos.Nucleo.Extensiones;
+using Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades;
+using Nlayer.Nlayer.Dominio.Nucleo;
+using Nlayer.Nlayer.Infraestructura.Datos.Nucleo.Recursos;
+using Nlayer.Nlayer.Infraestructura.Transversales.Logging;
 
-namespace Sci.Nlayer.Infraestructura.Datos.Nucleo
+namespace Nlayer.Nlayer.Infraestructura.Datos.Nucleo
 {
     public class Repositorio<TEntidad> : IRepositorio<TEntidad> where TEntidad : class, IObjectWithChangeTracker
     {

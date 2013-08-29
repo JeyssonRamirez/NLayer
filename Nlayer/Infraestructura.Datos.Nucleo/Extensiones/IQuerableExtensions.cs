@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IQuerableExtensions.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="IQuerableExtensions.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // -----------------------------------------------------------------------
@@ -12,7 +12,7 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Sci.Nlayer.Infraestructura.Datos.Nucleo.Extensiones
+namespace Nlayer.Nlayer.Infraestructura.Datos.Nucleo.Extensiones
 {
     public static class IQueryableExtensions
     {

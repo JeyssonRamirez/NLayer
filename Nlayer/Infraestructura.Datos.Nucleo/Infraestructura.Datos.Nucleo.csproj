@@ -8,7 +8,7 @@
     <ProjectGuid>{CF3A959C-55DF-49DE-93B5-E3A820E02B2B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sci.Nlayer.Infraestructura.Datos.Nucleo</RootNamespace>
+    <RootNamespace>Nlayer.Nlayer.Infraestructura.Datos.Nucleo</RootNamespace>
     <AssemblyName>Sci.Nlayer.Infraestructura.Datos.Nucleo</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="AccesoDual.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="AccesoDual.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 // -----------------------------------------------------------------------
@@ -12,7 +12,7 @@ using System.Linq;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 
-namespace Sci.Nlayer.Infraestructura.Datos.Nucleo.Extensiones
+namespace Nlayer.Nlayer.Infraestructura.Datos.Nucleo.Extensiones
 {
     public class AccesoDual
     {

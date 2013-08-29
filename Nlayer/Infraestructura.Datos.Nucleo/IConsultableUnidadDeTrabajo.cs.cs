@@ -1,15 +1,21 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="IConsultableUnidadDeTrabajo.cs.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
-// </copyright>
-// <author>Jhonnys Lopez Celedon</author>
-// -----------------------------------------------------------------------
+﻿//   -----------------------------------------------------------------------
+//   <copyright file=IConsultableUnidadDeTrabajo.cs.cs company="Banlinea">
+//       Copyright (c) Banlinea Todos los derechos reservados.
+//   </copyright>
+//   <author>Jeysson Stevens  Ramirez </author>
+//   <Date>  2013 -08-29  - 11:16 a.m.</Date>
+//   <Update> 2013-08-29 - 11:42 a.m.</Update>
+//   -----------------------------------------------------------------------
+
+#region
 
 using System.Data.Objects;
-using Sci.Nlayer.Dominio.ModuloPrincipal.Entidades;
-using Sci.Nlayer.Dominio.Nucleo;
+using Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades;
+using Nlayer.Nlayer.Dominio.Nucleo;
 
-namespace Sci.Nlayer.Infraestructura.Datos.Nucleo
+#endregion
+
+namespace Nlayer.Nlayer.Infraestructura.Datos.Nucleo
 {
     public interface IConsultableUnidadDeTrabajo : IUnidadDeTrabajo
     {
