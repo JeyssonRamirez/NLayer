@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Sci.Nlayer.ServiciosDistribuidos.ModuloPrincipal.Providers.ServicioProviders"  %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Nlayer.Nlayer.ServiciosDistribuidos.ModuloPrincipal.Providers.ServicioProviders"  %>
