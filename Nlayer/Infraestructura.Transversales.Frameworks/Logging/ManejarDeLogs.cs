@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ManejarDeLogs.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="ManejarDeLogs.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys López Celedon</author>
 // -----------------------------------------------------------------------
@@ -10,9 +10,9 @@ using System.Configuration;
 using System.Data;
 using System.Data.Common;
 using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
-using Sci.Nlayer.Infraestructura.Transversales.Logging;
+using Nlayer.Nlayer.Infraestructura.Transversales.Logging;
 
-namespace Sci.Nlayer.Infraestructura.Transversales.Frameworks.Logging
+namespace Nlayer.Nlayer.Infraestructura.Transversales.Frameworks.Logging
 {
     public class ManejadorDeLogs : IManejadorDeLogs
     {
@@ -23,7 +23,7 @@ namespace Sci.Nlayer.Infraestructura.Transversales.Frameworks.Logging
             try
             {
                 SqlDatabase baseDedatos = new SqlDatabase(ConfigurationManager.ConnectionStrings["AccesoDual"].ConnectionString);
-                DbCommand comando = baseDedatos.GetStoredProcCommand("adm.SCISP_RegistrarErrorAplicativo");
+                DbCommand comando = baseDedatos.GetStoredProcCommand("adm.NlayerSP_RegistrarErrorAplicativo");
 
                 comando.CommandType = CommandType.StoredProcedure;
 

@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="EntidadHija" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>SCI.NLayer.Dominio.ModuloPrincipal.Entidades.EntidadHija, SCI.NLayer.Dominio.ModuloPrincipal.Entidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>Nlayer.Dominio.ModuloPrincipal.Entidades.EntidadHija, Nlayer.Dominio.ModuloPrincipal.Entidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

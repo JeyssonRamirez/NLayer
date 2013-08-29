@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ManejadorDeTrazas.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="ManejadorDeTrazas.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // -----------------------------------------------------------------------
@@ -10,9 +10,9 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Security;
 using System.Security.Permissions;
-using Sci.Nlayer.Infraestructura.Transversales.Logging;
+using Nlayer.Nlayer.Infraestructura.Transversales.Logging;
 
-namespace Sci.Nlayer.Infraestructura.Transversales.Frameworks.Logging
+namespace Nlayer.Nlayer.Infraestructura.Transversales.Frameworks.Logging
 {
     public class ManejadorDeTrazas : IManejadorDeTrazas
     {
@@ -26,7 +26,7 @@ namespace Sci.Nlayer.Infraestructura.Transversales.Frameworks.Logging
 
         public ManejadorDeTrazas()
         {
-            _traceSource = new TraceSource("SCINLayer");
+            _traceSource = new TraceSource("NlayerNLayer");
         }
 
         #endregion

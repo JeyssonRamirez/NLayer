@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Capas", "1 - Capas", "{721B69F8-78FF-4CC0-90F0-A7F42F079611}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 - Presentacion", "1.1 - Presentacion", "{845A4A74-329C-4000-81BB-2C28133F4220}"
@@ -21,13 +21,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5.1.1 - Núcleo", "1.5.1.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5.1.3 - Módulos", "1.5.1.3 - Módulos", "{5FFB02C9-4D27-48D0-8C64-6F32285C5B80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructura.Datos.Nucleo", "Infraestructura.Datos.Nucleo\Infraestructura.Datos.Nucleo.csproj", "{CF3A959C-55DF-49DE-93B5-E3A820E02B2B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructura.Datos.ModuloPrincipal", "Infraestructura.Datos.ModuloPrincipal\Infraestructura.Datos.ModuloPrincipal.csproj", "{396E1D30-62E6-418D-82AD-8756B48EB1AD}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4.1 - Núcleo", "1.4.1 - Núcleo", "{0A48C7BF-1105-413C-9F12-71209F165DD0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4.2 - Módulos", "1.4.2 - Módulos", "{D72FCCA3-3FDD-4DFA-8B70-9BF9A7B973D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1.1 - Agente de Servicios", "1.1.1 - Agente de Servicios", "{05CA1D6C-DF29-4C7F-9371-2096B3635B17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1.2 - ASP.NET", "1.1.2 - ASP.NET", "{3145C52A-7F49-442E-91ED-46ECDCF02705}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1 - Módulos", "1.3.1 - Módulos", "{FB8E5864-A031-4296-BB25-62E25D7698F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.1 - Núcleo", "1.2.1 - Núcleo", "{B3445CDF-D12E-4D72-A08A-3F808050B0DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.2 - Módulos", "1.2.2 - Módulos", "{D75B49E7-3B2C-46C9-9E72-D97E4B2AF797}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.3 - Implementaciones", "1.2.3 - Implementaciones", "{22DE834A-5B68-4694-9782-CBC25864C642}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5.1.2 - Agente de Servicios Externos", "1.5.1.2 - Agente de Servicios Externos", "{B29D5321-B219-41EC-AF64-B6CF7D3DDDF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructura.Datos.Nucleo", "Infraestructura.Datos.Nucleo\Infraestructura.Datos.Nucleo.csproj", "{CF3A959C-55DF-49DE-93B5-E3A820E02B2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructura.Datos.ModuloPrincipal", "Infraestructura.Datos.ModuloPrincipal\Infraestructura.Datos.ModuloPrincipal.csproj", "{396E1D30-62E6-418D-82AD-8756B48EB1AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio.Nucleo", "Dominio.Nucleo\Dominio.Nucleo.csproj", "{571F8B11-5E3C-4F59-9FE2-D65C4CBFABBC}"
 EndProject
@@ -41,25 +55,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructura.Transversal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructura.Transversales.IoC", "Infraestructura.Transversales.IoC\Infraestructura.Transversales.IoC.csproj", "{76278D99-9AE0-4866-B748-20458FA7DD21}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1.1 - Agente de Servicios", "1.1.1 - Agente de Servicios", "{05CA1D6C-DF29-4C7F-9371-2096B3635B17}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1.2 - ASP.NET", "1.1.2 - ASP.NET", "{3145C52A-7F49-442E-91ED-46ECDCF02705}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3.1 - Módulos", "1.3.1 - Módulos", "{FB8E5864-A031-4296-BB25-62E25D7698F0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacion.ModuloPrincipal", "Aplicacion.ModuloPrincipal\Aplicacion.ModuloPrincipal.csproj", "{EE515283-1074-4DBC-BC69-7A3064AD57DD}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.1 - Núcleo", "1.2.1 - Núcleo", "{B3445CDF-D12E-4D72-A08A-3F808050B0DC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.2 - Módulos", "1.2.2 - Módulos", "{D75B49E7-3B2C-46C9-9E72-D97E4B2AF797}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.3 - Implementaciones", "1.2.3 - Implementaciones", "{22DE834A-5B68-4694-9782-CBC25864C642}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion.AspNet.Sitio", "Presentacion.AspNet.Sitio\Presentacion.AspNet.Sitio.csproj", "{8EC3CBBC-059B-42FE-B41A-738584DC4211}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion.AspNet.Administracion", "Presentacion.AspNet.Administracion\Presentacion.AspNet.Administracion.csproj", "{496870C4-9B64-4B8A-847E-85E1F82D8A0A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5.1.2 - Agente de Servicios Externos", "1.5.1.2 - Agente de Servicios Externos", "{B29D5321-B219-41EC-AF64-B6CF7D3DDDF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructura.Datos.ModuloAdministracion", "Infraestructura.Datos.ModuloAdministracion\Infraestructura.Datos.ModuloAdministracion.csproj", "{273D460D-D84F-446C-AF8D-D13F3CE48308}"
 EndProject
@@ -74,6 +74,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiciosDistribuidos.Implementaciones", "ServiciosDistribuidos.Implementaciones\ServiciosDistribuidos.Implementaciones.csproj", "{F3260876-2065-4072-928A-0FE0334D02EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion.AgenteDeServicios", "Presentacion.AgenteDeServicios\Presentacion.AgenteDeServicios.csproj", "{C905ADF0-8A76-427E-8642-F0C48BBB3427}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3260876-2065-4072-928A-0FE0334D02EE} = {F3260876-2065-4072-928A-0FE0334D02EE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

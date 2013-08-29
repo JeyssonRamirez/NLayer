@@ -8,7 +8,7 @@
     <ProjectGuid>{396E1D30-62E6-418D-82AD-8756B48EB1AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sci.Nlayer.Infraestructura.Datos.ModuloPrincipal</RootNamespace>
+    <RootNamespace>Nlayer.Nlayer.Infraestructura.Datos.ModuloPrincipal</RootNamespace>
     <AssemblyName>Sci.Nlayer.Infraestructura.Datos.ModuloPrincipal</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

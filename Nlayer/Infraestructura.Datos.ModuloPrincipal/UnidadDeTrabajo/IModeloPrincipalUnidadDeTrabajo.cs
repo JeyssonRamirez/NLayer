@@ -24,10 +24,10 @@ using System.Linq;
 
 
 
-using Sci.Nlayer.Infraestructura.Datos.Nucleo;
-using Sci.Nlayer.Dominio.ModuloPrincipal.Entidades;
+using Nlayer.Nlayer.Infraestructura.Datos.Nucleo;
+using Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades;
 
-namespace Sci.Nlayer.Infraestructura.Datos.ModuloPrincipal.UnidadDeTrabajo
+namespace Nlayer.Nlayer.Infraestructura.Datos.ModuloPrincipal.UnidadDeTrabajo
 {
     
     ///<sumary>
@@ -38,40 +38,41 @@ namespace Sci.Nlayer.Infraestructura.Datos.ModuloPrincipal.UnidadDeTrabajo
        
         #region ObjectSet Properties
     
-        IObjectSet<Aplicacion> Aplicacion{get;}
-        
+    	IObjectSet<Aplicacion> Aplicacion{get;}
+    	
     
-        IObjectSet<ErrorAplicacion> ErrorAplicacion{get;}
-        
+    	IObjectSet<ErrorAplicacion> ErrorAplicacion{get;}
+    	
     
-        IObjectSet<Membresia> Membresia{get;}
-        
+    	IObjectSet<Membresia> Membresia{get;}
+    	
     
-        IObjectSet<Perfil> Perfil{get;}
-        
+    	IObjectSet<Perfil> Perfil{get;}
+    	
     
-        IObjectSet<Propiedad> Propiedad{get;}
-        
+    	IObjectSet<Propiedad> Propiedad{get;}
+    	
     
-        IObjectSet<Rol> Rol{get;}
-        
+    	IObjectSet<Rol> Rol{get;}
+    	
     
-        IObjectSet<RolPropiedad> RolPropiedad{get;}
-        
+    	IObjectSet<RolPropiedad> RolPropiedad{get;}
+    	
     
-        IObjectSet<RolUsuario> RolUsuario{get;}
-        
+    	IObjectSet<RolUsuario> RolUsuario{get;}
+    	
     
-        IObjectSet<SiteMap> SiteMap{get;}
-        
+    	IObjectSet<SiteMap> SiteMap{get;}
+    	
     
-        IObjectSet<Usuario> Usuario{get;}
-        
+    	IObjectSet<Usuario> Usuario{get;}
+    	
     
-        IObjectSet<ValorPropiedad> ValorPropiedad{get;}
-        
+    	IObjectSet<ValorPropiedad> ValorPropiedad{get;}
+    	
 
         #endregion
+
     
     }
 }

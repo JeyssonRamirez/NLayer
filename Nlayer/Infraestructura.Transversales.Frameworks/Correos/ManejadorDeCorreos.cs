@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ManejadorDeCorreos.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="ManejadorDeCorreos.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // -----------------------------------------------------------------------
@@ -8,9 +8,9 @@
 using System;
 using System.Collections.Generic;
 using ActiveUp.Net.Mail;
-using Sci.Nlayer.Infraestructura.Transversales.Correos;
+using Nlayer.Nlayer.Infraestructura.Transversales.Correos;
 
-namespace Sci.Nlayer.Infraestructura.Transversales.Frameworks.Correos
+namespace Nlayer.Nlayer.Infraestructura.Transversales.Frameworks.Correos
 {
     public class ManejadorDeCorreos : IManejadorDeCorreos
     {
@@ -48,17 +48,17 @@ namespace Sci.Nlayer.Infraestructura.Transversales.Frameworks.Correos
         public void Enviar()
         {
             ServerCollection servers = new ServerCollection();
-            Server sci = new Server();
+            Server Nlayer = new Server();
             Message message = new Message();
             MimeBody mimeBody = new MimeBody(BodyFormat.Html);
             AddressCollection destinos = new AddressCollection();
 
-            sci.Host = "mail.softwaresci.com";
-            sci.Password = "12345678";
-            sci.Port = 25;
-            sci.Username = "informacion@softwaresci.com";
+            Nlayer.Host = "mail.softwareNlayer.com";
+            Nlayer.Password = "12345678";
+            Nlayer.Port = 25;
+            Nlayer.Username = "informacion@softwareNlayer.com";
 
-            servers.Add(sci);
+            servers.Add(Nlayer);
 
             if (_destinos != null)
             {
@@ -80,8 +80,8 @@ namespace Sci.Nlayer.Infraestructura.Transversales.Frameworks.Correos
 
             message.BodyHtml = mimeBody;
             message.Date = DateTime.Now;
-            message.From = new Address("informacion@softwaresci.com");
-            message.Organization = "SCI Software";
+            message.From = new Address("informacion@softwareNlayer.com");
+            message.Organization = "Nlayer Software";
             message.Priority = MessagePriority.Normal;
             message.To = destinos;
             message.Subject = _asunto;

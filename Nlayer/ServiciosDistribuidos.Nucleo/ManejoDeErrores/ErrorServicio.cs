@@ -1,13 +1,13 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ErrorServicio.cs" company="SCI Software">
-//     Copyright (c) SCI Software 2011. Todos los derechos reservados.
+// <copyright file="ErrorServicio.cs" company="Nlayer Software">
+//     Copyright (c) Nlayer Software 2011. Todos los derechos reservados.
 // </copyright>
 // <author>Jhonnys Lopez Celedon</author>
 // -----------------------------------------------------------------------
 
 using System.Runtime.Serialization;
 
-namespace Sci.Nlayer.ServiciosDistribuidos.Nucleo.ManejoDeErrores
+namespace Nlayer.Nlayer.ServiciosDistribuidos.Nucleo.ManejoDeErrores
 {
     [DataContract]
     public class ErrorServicio

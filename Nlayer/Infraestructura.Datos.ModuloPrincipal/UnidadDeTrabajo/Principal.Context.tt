@@ -20,7 +20,7 @@ if (container == null)
     return "// No EntityContainer exists in the model, so no code was generated";
 }
 
-WriteHeader(fileManager, "Sci.Nlayer.Dominio.ModuloPrincipal.Entidades", "Sci.Nlayer.Dominio.Nucleo", "Sci.Nlayer.Infraestructura.Datos.Nucleo");
+WriteHeader(fileManager, "Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades", "Nlayer.Nlayer.Dominio.Nucleo", "Nlayer.Nlayer.Infraestructura.Datos.Nucleo");
 BeginNamespace(namespaceName, code);
 
 #>

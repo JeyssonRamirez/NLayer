@@ -24,11 +24,11 @@ using System.Linq;
 
 
 
-using Sci.Nlayer.Dominio.ModuloPrincipal.Entidades;
-using Sci.Nlayer.Dominio.Nucleo;
-using Sci.Nlayer.Infraestructura.Datos.Nucleo;
+using Nlayer.Nlayer.Dominio.ModuloPrincipal.Entidades;
+using Nlayer.Nlayer.Dominio.Nucleo;
+using Nlayer.Nlayer.Infraestructura.Datos.Nucleo;
 
-namespace Sci.Nlayer.Infraestructura.Datos.ModuloPrincipal.UnidadDeTrabajo
+namespace Nlayer.Nlayer.Infraestructura.Datos.ModuloPrincipal.UnidadDeTrabajo
 {
     [System.Diagnostics.DebuggerNonUserCode()]
     [System.CodeDom.Compiler.GeneratedCode("EF","v 4.0")]
