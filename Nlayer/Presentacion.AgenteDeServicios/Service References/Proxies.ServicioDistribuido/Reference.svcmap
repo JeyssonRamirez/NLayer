@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="78a85640-305a-4c5d-b4d5-1cc24c3af808" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="SCI.NLayer.Dominio.ModuloPrincipal.Entidades" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1000/ServicioDistribuido.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioDistribuido.xsd" MetadataType="Schema" ID="98f4391b-f196-43d7-9131-4e78b3f05b67" SourceId="1" SourceUrl="http://localhost:1000/ServicioDistribuido.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioDistribuido1.xsd" MetadataType="Schema" ID="eb89a035-fe91-433c-b486-0f48b6997e21" SourceId="1" SourceUrl="http://localhost:1000/ServicioDistribuido.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioDistribuido.disco" MetadataType="Disco" ID="0cdabcbf-d128-4991-8b22-b7c12f7176a0" SourceId="1" SourceUrl="http://localhost:1000/ServicioDistribuido.svc?disco" />
+    <MetadataFile FileName="ServicioDistribuido.wsdl" MetadataType="Wsdl" ID="5389fcd4-346b-43dd-a29b-77ac7819362f" SourceId="1" SourceUrl="http://localhost:1000/ServicioDistribuido.svc?wsdl" />
+    <MetadataFile FileName="ServicioDistribuido2.xsd" MetadataType="Schema" ID="29fa55a5-62af-4470-b4dd-d745953756b9" SourceId="1" SourceUrl="http://localhost:1000/ServicioDistribuido.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

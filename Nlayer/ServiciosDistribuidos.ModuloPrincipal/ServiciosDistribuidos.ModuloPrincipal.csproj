@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{711E1934-2B67-4F44-BB55-ECC3E19E7866}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sci.Nlayer.ServiciosDistribuidos.ModuloPrincipal</RootNamespace>
+    <AssemblyName>Sci.Nlayer.ServiciosDistribuidos.ModuloPrincipal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IServicioDistribuido.cs" />
+    <Compile Include="Providers\IServicioProviders.cs" />
+    <Compile Include="Providers\ServicioProviders.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioDistribuido.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aplicacion.ModuloPrincipal\Aplicacion.ModuloPrincipal.csproj">
+      <Project>{EE515283-1074-4DBC-BC69-7A3064AD57DD}</Project>
+      <Name>Aplicacion.ModuloPrincipal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominio.ModuloPrincipal.Entidades\Dominio.ModuloPrincipal.Entidades.csproj">
+      <Project>{8384B62D-C8A9-45D8-8A3A-E51D495B3DE5}</Project>
+      <Name>Dominio.ModuloPrincipal.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestructura.Transversales.IoC\Infraestructura.Transversales.IoC.csproj">
+      <Project>{76278D99-9AE0-4866-B748-20458FA7DD21}</Project>
+      <Name>Infraestructura.Transversales.IoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestructura.Transversales\Infraestructura.Transversales.csproj">
+      <Project>{B98745B0-AB2F-4558-82A5-2D0373F0A9C1}</Project>
+      <Name>Infraestructura.Transversales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiciosDistribuidos.Nucleo\ServiciosDistribuidos.Nucleo.csproj">
+      <Project>{94F1B02F-E606-442A-9DE2-083467F0A210}</Project>
+      <Name>ServiciosDistribuidos.Nucleo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

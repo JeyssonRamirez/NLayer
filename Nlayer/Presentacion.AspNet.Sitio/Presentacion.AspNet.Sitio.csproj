@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8EC3CBBC-059B-42FE-B41A-738584DC4211}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sci.Nlayer.Presentacion.AspNet.Sitio</RootNamespace>
+    <AssemblyName>Sci.Nlayer.Presentacion.AspNet.Sitio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cuentas\CambiarPassword.aspx" />
+    <Content Include="Cuentas\IniciarSesion.aspx" />
+    <Content Include="Cuentas\Recuperar.aspx" />
+    <Content Include="Cuentas\Registrarse.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\additional-methods.min.js" />
+    <Content Include="Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="Scripts\jquery.ui.datepicker-es.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Styles\images\activity.gif" />
+    <Content Include="Styles\images\blockcontentbullets.png" />
+    <Content Include="Styles\images\blockcontent_h.png" />
+    <Content Include="Styles\images\blockcontent_s.png" />
+    <Content Include="Styles\images\blockcontent_v.png" />
+    <Content Include="Styles\images\blockheader.png" />
+    <Content Include="Styles\images\block_c.png" />
+    <Content Include="Styles\images\block_h.png" />
+    <Content Include="Styles\images\block_s.png" />
+    <Content Include="Styles\images\block_v.png" />
+    <Content Include="Styles\images\Bottom_texture.jpg" />
+    <Content Include="Styles\images\button.png" />
+    <Content Include="Styles\images\footer_b.png" />
+    <Content Include="Styles\images\footer_s.png" />
+    <Content Include="Styles\images\footer_t.png" />
+    <Content Include="Styles\images\header.jpg" />
+    <Content Include="Styles\images\header.png" />
+    <Content Include="Styles\images\menuitem.png" />
+    <Content Include="Styles\images\nav.png" />
+    <Content Include="Styles\images\postquote.png" />
+    <Content Include="Styles\images\post_h.png" />
+    <Content Include="Styles\images\post_s.png" />
+    <Content Include="Styles\images\post_v.png" />
+    <Content Include="Styles\images\sheet_h.png" />
+    <Content Include="Styles\images\sheet_s.png" />
+    <Content Include="Styles\images\sheet_v.png" />
+    <Content Include="Styles\images\spacer.gif" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\style.ie6.css" />
+    <Content Include="Styles\style.ie7.css" />
+    <Content Include="Styles\images\subitem.png" />
+    <Content Include="Styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Styles\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cuentas\CambiarPassword.aspx.cs">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuentas\CambiarPassword.aspx.designer.cs">
+      <DependentUpon>CambiarPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentas\IniciarSesion.aspx.cs">
+      <DependentUpon>IniciarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuentas\IniciarSesion.aspx.designer.cs">
+      <DependentUpon>IniciarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentas\Recuperar.aspx.cs">
+      <DependentUpon>Recuperar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuentas\Recuperar.aspx.designer.cs">
+      <DependentUpon>Recuperar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentas\Registrarse.aspx.cs">
+      <DependentUpon>Registrarse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuentas\Registrarse.aspx.designer.cs">
+      <DependentUpon>Registrarse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio.ModuloPrincipal.Entidades\Dominio.ModuloPrincipal.Entidades.csproj">
+      <Project>{8384B62D-C8A9-45D8-8A3A-E51D495B3DE5}</Project>
+      <Name>Dominio.ModuloPrincipal.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestructura.Transversales.Proveedores\Infraestructura.Transversales.Proveedores.csproj">
+      <Project>{AEBFBB20-805B-44D4-8531-1FF4D81A4448}</Project>
+      <Name>Infraestructura.Transversales.Proveedores</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Presentacion.AgenteDeServicios\Presentacion.AgenteDeServicios.csproj">
+      <Project>{C905ADF0-8A76-427E-8642-F0C48BBB3427}</Project>
+      <Name>Presentacion.AgenteDeServicios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1002</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

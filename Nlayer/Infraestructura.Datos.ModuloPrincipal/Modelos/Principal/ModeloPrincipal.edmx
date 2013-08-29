@@ -1,0 +1,849 @@
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+
+<edmx:Edmx Version="2.0"
+           xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Modelos.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModelosStoreContainer">
+          <EntitySet Name="Aplicacion" EntityType="Modelos.Store.Aplicacion" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="ErrorAplicacion" EntityType="Modelos.Store.ErrorAplicacion" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="Membresia" EntityType="Modelos.Store.Membresia" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="Perfil" EntityType="Modelos.Store.Perfil" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="Propiedad" EntityType="Modelos.Store.Propiedad" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="Rol" EntityType="Modelos.Store.Rol" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="RolPropiedad" EntityType="Modelos.Store.RolPropiedad" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="RolUsuario" EntityType="Modelos.Store.RolUsuario" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="SiteMap" EntityType="Modelos.Store.SiteMap" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="Usuario" EntityType="Modelos.Store.Usuario" store:Type="Tables" Schema="adm" />
+          <EntitySet Name="ValorPropiedad" EntityType="Modelos.Store.ValorPropiedad" store:Type="Tables" Schema="adm" />
+          <AssociationSet Name="FK_Membresia_Aplicacion" Association="Modelos.Store.FK_Membresia_Aplicacion">
+            <End Role="Aplicacion" EntitySet="Aplicacion" />
+            <End Role="Membresia" EntitySet="Membresia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Membresia_Usuario" Association="Modelos.Store.FK_Membresia_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Membresia" EntitySet="Membresia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Perfil_Aplicacion" Association="Modelos.Store.FK_Perfil_Aplicacion">
+            <End Role="Aplicacion" EntitySet="Aplicacion" />
+            <End Role="Perfil" EntitySet="Perfil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Perfil_Usuario" Association="Modelos.Store.FK_Perfil_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Perfil" EntitySet="Perfil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolPropiedad_Propiedad" Association="Modelos.Store.FK_RolPropiedad_Propiedad">
+            <End Role="Propiedad" EntitySet="Propiedad" />
+            <End Role="RolPropiedad" EntitySet="RolPropiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolPropiedad_Rol" Association="Modelos.Store.FK_RolPropiedad_Rol">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="RolPropiedad" EntitySet="RolPropiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolUsuario_Rol" Association="Modelos.Store.FK_RolUsuario_Rol">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="RolUsuario" EntitySet="RolUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolUsuario_Usuario" Association="Modelos.Store.FK_RolUsuario_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="RolUsuario" EntitySet="RolUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValorPropiedad_Propiedad" Association="Modelos.Store.FK_ValorPropiedad_Propiedad">
+            <End Role="Propiedad" EntitySet="Propiedad" />
+            <End Role="ValorPropiedad" EntitySet="ValorPropiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValorPropiedad_Usuario" Association="Modelos.Store.FK_ValorPropiedad_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="ValorPropiedad" EntitySet="ValorPropiedad" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Aplicacion">
+          <Key>
+            <PropertyRef Name="AplicacionId" />
+          </Key>
+          <Property Name="AplicacionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="ErrorAplicacion">
+          <Key>
+            <PropertyRef Name="ErrorAplicacionId" />
+          </Key>
+          <Property Name="ErrorAplicacionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Aplicacion" Type="nvarchar" MaxLength="256" />
+          <Property Name="Error" Type="nvarchar" MaxLength="512" />
+          <Property Name="Excepcion" Type="text" />
+          <Property Name="Interna" Type="text" />
+          <Property Name="Registrado" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Membresia">
+          <Key>
+            <PropertyRef Name="MembresiaId" />
+          </Key>
+          <Property Name="MembresiaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AplicacionId" Type="int" Nullable="false" />
+          <Property Name="UsuarioId" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="PreguntaPassword" Type="nvarchar" MaxLength="256" />
+          <Property Name="RespuestaPassword" Type="nvarchar" MaxLength="256" />
+          <Property Name="Comentario" Type="nvarchar" MaxLength="512" />
+          <Property Name="UltimaActividad" Type="datetime" Nullable="false" />
+          <Property Name="UltimaSesion" Type="datetime" Nullable="false" />
+          <Property Name="UltimoCambioDePassword" Type="datetime" Nullable="false" />
+          <Property Name="CantidadIntentosFallidosPassword" Type="int" Nullable="false" />
+          <Property Name="InicioIntentosFallidosPassword" Type="datetime" Nullable="false" />
+          <Property Name="CantidadIntentosFallidosPregunta" Type="int" Nullable="false" />
+          <Property Name="InicioIntentosFallidosPregunta" Type="datetime" Nullable="false" />
+          <Property Name="EstaAprobado" Type="bit" Nullable="false" />
+          <Property Name="EstaBloqueado" Type="bit" Nullable="false" />
+          <Property Name="UltimoBloqueo" Type="datetime" Nullable="false" />
+          <Property Name="Registrado" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Perfil">
+          <Key>
+            <PropertyRef Name="PerfilId" />
+          </Key>
+          <Property Name="PerfilId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AplicacionId" Type="int" Nullable="false" />
+          <Property Name="UsuarioId" Type="int" Nullable="false" />
+          <Property Name="UltimaActividad" Type="datetime" Nullable="false" />
+          <Property Name="UltimaActualizacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Propiedad">
+          <Key>
+            <PropertyRef Name="PropiedadId" />
+          </Key>
+          <Property Name="PropiedadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="Tipo" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="RolId" />
+          </Key>
+          <Property Name="RolId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AplicacionId" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="RolPropiedad">
+          <Key>
+            <PropertyRef Name="RolPropiedadId" />
+          </Key>
+          <Property Name="RolPropiedadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RolId" Type="int" Nullable="false" />
+          <Property Name="PropiedadId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RolUsuario">
+          <Key>
+            <PropertyRef Name="RolUsuarioId" />
+          </Key>
+          <Property Name="RolUsuarioId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UsuarioId" Type="int" Nullable="false" />
+          <Property Name="RolId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SiteMap">
+          <Key>
+            <PropertyRef Name="SiteMapId" />
+          </Key>
+          <Property Name="SiteMapId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AplicacionId" Type="int" Nullable="false" />
+          <Property Name="Titulo" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="512" />
+          <Property Name="Url" Type="nvarchar" MaxLength="512" />
+          <Property Name="Roles" Type="nvarchar" MaxLength="512" />
+          <Property Name="PadreId" Type="int" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="UsuarioId" />
+          </Key>
+          <Property Name="UsuarioId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProviderUserKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" Nullable="false" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="ValorPropiedad">
+          <Key>
+            <PropertyRef Name="UsuarioId" />
+            <PropertyRef Name="PropiedadId" />
+          </Key>
+          <Property Name="UsuarioId" Type="int" Nullable="false" />
+          <Property Name="PropiedadId" Type="int" Nullable="false" />
+          <Property Name="Valor" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Membresia_Aplicacion">
+          <End Role="Aplicacion" Type="Modelos.Store.Aplicacion" Multiplicity="1" />
+          <End Role="Membresia" Type="Modelos.Store.Membresia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aplicacion">
+              <PropertyRef Name="AplicacionId" />
+            </Principal>
+            <Dependent Role="Membresia">
+              <PropertyRef Name="AplicacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Membresia_Usuario">
+          <End Role="Usuario" Type="Modelos.Store.Usuario" Multiplicity="1" />
+          <End Role="Membresia" Type="Modelos.Store.Membresia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="UsuarioId" />
+            </Principal>
+            <Dependent Role="Membresia">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Perfil_Aplicacion">
+          <End Role="Aplicacion" Type="Modelos.Store.Aplicacion" Multiplicity="1" />
+          <End Role="Perfil" Type="Modelos.Store.Perfil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aplicacion">
+              <PropertyRef Name="AplicacionId" />
+            </Principal>
+            <Dependent Role="Perfil">
+              <PropertyRef Name="AplicacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Perfil_Usuario">
+          <End Role="Usuario" Type="Modelos.Store.Usuario" Multiplicity="1" />
+          <End Role="Perfil" Type="Modelos.Store.Perfil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="UsuarioId" />
+            </Principal>
+            <Dependent Role="Perfil">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolPropiedad_Propiedad">
+          <End Role="Propiedad" Type="Modelos.Store.Propiedad" Multiplicity="1" />
+          <End Role="RolPropiedad" Type="Modelos.Store.RolPropiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propiedad">
+              <PropertyRef Name="PropiedadId" />
+            </Principal>
+            <Dependent Role="RolPropiedad">
+              <PropertyRef Name="PropiedadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolPropiedad_Rol">
+          <End Role="Rol" Type="Modelos.Store.Rol" Multiplicity="1" />
+          <End Role="RolPropiedad" Type="Modelos.Store.RolPropiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="RolId" />
+            </Principal>
+            <Dependent Role="RolPropiedad">
+              <PropertyRef Name="RolId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolUsuario_Rol">
+          <End Role="Rol" Type="Modelos.Store.Rol" Multiplicity="1" />
+          <End Role="RolUsuario" Type="Modelos.Store.RolUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="RolId" />
+            </Principal>
+            <Dependent Role="RolUsuario">
+              <PropertyRef Name="RolId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolUsuario_Usuario">
+          <End Role="Usuario" Type="Modelos.Store.Usuario" Multiplicity="1" />
+          <End Role="RolUsuario" Type="Modelos.Store.RolUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="UsuarioId" />
+            </Principal>
+            <Dependent Role="RolUsuario">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValorPropiedad_Propiedad">
+          <End Role="Propiedad" Type="Modelos.Store.Propiedad" Multiplicity="1" />
+          <End Role="ValorPropiedad" Type="Modelos.Store.ValorPropiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propiedad">
+              <PropertyRef Name="PropiedadId" />
+            </Principal>
+            <Dependent Role="ValorPropiedad">
+              <PropertyRef Name="PropiedadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValorPropiedad_Usuario">
+          <End Role="Usuario" Type="Modelos.Store.Usuario" Multiplicity="1" />
+          <End Role="ValorPropiedad" Type="Modelos.Store.ValorPropiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="UsuarioId" />
+            </Principal>
+            <Dependent Role="ValorPropiedad">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Modelos"
+              Alias="Self"
+              xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation"
+              xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ModeloPrincipal"
+                         annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Aplicacion" EntityType="Modelos.Aplicacion" />
+          <EntitySet Name="ErrorAplicacion" EntityType="Modelos.ErrorAplicacion" />
+          <EntitySet Name="Membresia" EntityType="Modelos.Membresia" />
+          <EntitySet Name="Perfil" EntityType="Modelos.Perfil" />
+          <EntitySet Name="Propiedad" EntityType="Modelos.Propiedad" />
+          <EntitySet Name="Rol" EntityType="Modelos.Rol" />
+          <EntitySet Name="RolPropiedad" EntityType="Modelos.RolPropiedad" />
+          <EntitySet Name="RolUsuario" EntityType="Modelos.RolUsuario" />
+          <EntitySet Name="SiteMap" EntityType="Modelos.SiteMap" />
+          <EntitySet Name="Usuario" EntityType="Modelos.Usuario" />
+          <EntitySet Name="ValorPropiedad" EntityType="Modelos.ValorPropiedad" />
+          <AssociationSet Name="FK_Membresia_Aplicacion" Association="Modelos.FK_Membresia_Aplicacion">
+            <End Role="Aplicacion" EntitySet="Aplicacion" />
+            <End Role="Membresia" EntitySet="Membresia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Perfil_Aplicacion" Association="Modelos.FK_Perfil_Aplicacion">
+            <End Role="Aplicacion" EntitySet="Aplicacion" />
+            <End Role="Perfil" EntitySet="Perfil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Membresia_Usuario" Association="Modelos.FK_Membresia_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Membresia" EntitySet="Membresia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Perfil_Usuario" Association="Modelos.FK_Perfil_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Perfil" EntitySet="Perfil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolPropiedad_Propiedad" Association="Modelos.FK_RolPropiedad_Propiedad">
+            <End Role="Propiedad" EntitySet="Propiedad" />
+            <End Role="RolPropiedad" EntitySet="RolPropiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValorPropiedad_Propiedad" Association="Modelos.FK_ValorPropiedad_Propiedad">
+            <End Role="Propiedad" EntitySet="Propiedad" />
+            <End Role="ValorPropiedad" EntitySet="ValorPropiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolPropiedad_Rol" Association="Modelos.FK_RolPropiedad_Rol">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="RolPropiedad" EntitySet="RolPropiedad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolUsuario_Rol" Association="Modelos.FK_RolUsuario_Rol">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="RolUsuario" EntitySet="RolUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolUsuario_Usuario" Association="Modelos.FK_RolUsuario_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="RolUsuario" EntitySet="RolUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValorPropiedad_Usuario" Association="Modelos.FK_ValorPropiedad_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="ValorPropiedad" EntitySet="ValorPropiedad" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Aplicacion">
+          <Key>
+            <PropertyRef Name="AplicacionId" />
+          </Key>
+          <Property Type="Int32" Name="AplicacionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Membresia" Relationship="Modelos.FK_Membresia_Aplicacion" FromRole="Aplicacion" ToRole="Membresia" />
+          <NavigationProperty Name="Perfil" Relationship="Modelos.FK_Perfil_Aplicacion" FromRole="Aplicacion" ToRole="Perfil" />
+        </EntityType>
+        <EntityType Name="ErrorAplicacion">
+          <Key>
+            <PropertyRef Name="ErrorAplicacionId" />
+          </Key>
+          <Property Type="Int32" Name="ErrorAplicacionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Aplicacion" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Error" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Excepcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Interna" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Registrado" />
+        </EntityType>
+        <EntityType Name="Membresia">
+          <Key>
+            <PropertyRef Name="MembresiaId" />
+          </Key>
+          <Property Type="Int32" Name="MembresiaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="AplicacionId" Nullable="false" />
+          <Property Type="Int32" Name="UsuarioId" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PreguntaPassword" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RespuestaPassword" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Comentario" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UltimaActividad" Nullable="false" />
+          <Property Type="DateTime" Name="UltimaSesion" Nullable="false" />
+          <Property Type="DateTime" Name="UltimoCambioDePassword" Nullable="false" />
+          <Property Type="Int32" Name="CantidadIntentosFallidosPassword" Nullable="false" />
+          <Property Type="DateTime" Name="InicioIntentosFallidosPassword" Nullable="false" />
+          <Property Type="Int32" Name="CantidadIntentosFallidosPregunta" Nullable="false" />
+          <Property Type="DateTime" Name="InicioIntentosFallidosPregunta" Nullable="false" />
+          <Property Type="Boolean" Name="EstaAprobado" Nullable="false" />
+          <Property Type="Boolean" Name="EstaBloqueado" Nullable="false" />
+          <Property Type="DateTime" Name="UltimoBloqueo" Nullable="false" />
+          <Property Type="DateTime" Name="Registrado" Nullable="false" />
+          <NavigationProperty Name="Aplicacion" Relationship="Modelos.FK_Membresia_Aplicacion" FromRole="Membresia" ToRole="Aplicacion" />
+          <NavigationProperty Name="Usuario" Relationship="Modelos.FK_Membresia_Usuario" FromRole="Membresia" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Perfil">
+          <Key>
+            <PropertyRef Name="PerfilId" />
+          </Key>
+          <Property Type="Int32" Name="PerfilId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="AplicacionId" Nullable="false" />
+          <Property Type="Int32" Name="UsuarioId" Nullable="false" />
+          <Property Type="DateTime" Name="UltimaActividad" Nullable="false" />
+          <Property Type="DateTime" Name="UltimaActualizacion" Nullable="false" />
+          <NavigationProperty Name="Aplicacion" Relationship="Modelos.FK_Perfil_Aplicacion" FromRole="Perfil" ToRole="Aplicacion" />
+          <NavigationProperty Name="Usuario" Relationship="Modelos.FK_Perfil_Usuario" FromRole="Perfil" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Propiedad">
+          <Key>
+            <PropertyRef Name="PropiedadId" />
+          </Key>
+          <Property Type="Int32" Name="PropiedadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Tipo" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RolPropiedad" Relationship="Modelos.FK_RolPropiedad_Propiedad" FromRole="Propiedad" ToRole="RolPropiedad" />
+          <NavigationProperty Name="ValorPropiedad" Relationship="Modelos.FK_ValorPropiedad_Propiedad" FromRole="Propiedad" ToRole="ValorPropiedad" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="RolId" />
+          </Key>
+          <Property Type="Int32" Name="RolId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="AplicacionId" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RolPropiedad" Relationship="Modelos.FK_RolPropiedad_Rol" FromRole="Rol" ToRole="RolPropiedad" />
+          <NavigationProperty Name="RolUsuario" Relationship="Modelos.FK_RolUsuario_Rol" FromRole="Rol" ToRole="RolUsuario" />
+        </EntityType>
+        <EntityType Name="RolPropiedad">
+          <Key>
+            <PropertyRef Name="RolPropiedadId" />
+          </Key>
+          <Property Type="Int32" Name="RolPropiedadId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="RolId" Nullable="false" />
+          <Property Type="Int32" Name="PropiedadId" Nullable="false" />
+          <NavigationProperty Name="Propiedad" Relationship="Modelos.FK_RolPropiedad_Propiedad" FromRole="RolPropiedad" ToRole="Propiedad" />
+          <NavigationProperty Name="Rol" Relationship="Modelos.FK_RolPropiedad_Rol" FromRole="RolPropiedad" ToRole="Rol" />
+        </EntityType>
+        <EntityType Name="RolUsuario">
+          <Key>
+            <PropertyRef Name="RolUsuarioId" />
+          </Key>
+          <Property Type="Int32" Name="RolUsuarioId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UsuarioId" Nullable="false" />
+          <Property Type="Int32" Name="RolId" Nullable="false" />
+          <NavigationProperty Name="Rol" Relationship="Modelos.FK_RolUsuario_Rol" FromRole="RolUsuario" ToRole="Rol" />
+          <NavigationProperty Name="Usuario" Relationship="Modelos.FK_RolUsuario_Usuario" FromRole="RolUsuario" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="SiteMap">
+          <Key>
+            <PropertyRef Name="SiteMapId" />
+          </Key>
+          <Property Type="Int32" Name="SiteMapId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="AplicacionId" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Descripcion" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Url" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Roles" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PadreId" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="UsuarioId" />
+          </Key>
+          <Property Type="Int32" Name="UsuarioId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="ProviderUserKey" Nullable="false" />
+          <Property Type="String" Name="Login" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Membresia" Relationship="Modelos.FK_Membresia_Usuario" FromRole="Usuario" ToRole="Membresia" />
+          <NavigationProperty Name="Perfil" Relationship="Modelos.FK_Perfil_Usuario" FromRole="Usuario" ToRole="Perfil" />
+          <NavigationProperty Name="RolUsuario" Relationship="Modelos.FK_RolUsuario_Usuario" FromRole="Usuario" ToRole="RolUsuario" />
+          <NavigationProperty Name="ValorPropiedad" Relationship="Modelos.FK_ValorPropiedad_Usuario" FromRole="Usuario" ToRole="ValorPropiedad" />
+        </EntityType>
+        <EntityType Name="ValorPropiedad">
+          <Key>
+            <PropertyRef Name="UsuarioId" />
+            <PropertyRef Name="PropiedadId" />
+          </Key>
+          <Property Type="Int32" Name="UsuarioId" Nullable="false" />
+          <Property Type="Int32" Name="PropiedadId" Nullable="false" />
+          <Property Type="String" Name="Valor" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Propiedad" Relationship="Modelos.FK_ValorPropiedad_Propiedad" FromRole="ValorPropiedad" ToRole="Propiedad" />
+          <NavigationProperty Name="Usuario" Relationship="Modelos.FK_ValorPropiedad_Usuario" FromRole="ValorPropiedad" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="FK_Membresia_Aplicacion">
+          <End Type="Modelos.Aplicacion" Role="Aplicacion" Multiplicity="1" />
+          <End Type="Modelos.Membresia" Role="Membresia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aplicacion">
+              <PropertyRef Name="AplicacionId" />
+            </Principal>
+            <Dependent Role="Membresia">
+              <PropertyRef Name="AplicacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Perfil_Aplicacion">
+          <End Type="Modelos.Aplicacion" Role="Aplicacion" Multiplicity="1" />
+          <End Type="Modelos.Perfil" Role="Perfil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aplicacion">
+              <PropertyRef Name="AplicacionId" />
+            </Principal>
+            <Dependent Role="Perfil">
+              <PropertyRef Name="AplicacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Membresia_Usuario">
+          <End Type="Modelos.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="Modelos.Membresia" Role="Membresia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="UsuarioId" />
+            </Principal>
+            <Dependent Role="Membresia">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Perfil_Usuario">
+          <End Type="Modelos.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="Modelos.Perfil" Role="Perfil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="UsuarioId" />
+            </Principal>
+            <Dependent Role="Perfil">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolPropiedad_Propiedad">
+          <End Type="Modelos.Propiedad" Role="Propiedad" Multiplicity="1" />
+          <End Type="Modelos.RolPropiedad" Role="RolPropiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propiedad">
+              <PropertyRef Name="PropiedadId" />
+            </Principal>
+            <Dependent Role="RolPropiedad">
+              <PropertyRef Name="PropiedadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValorPropiedad_Propiedad">
+          <End Type="Modelos.Propiedad" Role="Propiedad" Multiplicity="1" />
+          <End Type="Modelos.ValorPropiedad" Role="ValorPropiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Propiedad">
+              <PropertyRef Name="PropiedadId" />
+            </Principal>
+            <Dependent Role="ValorPropiedad">
+              <PropertyRef Name="PropiedadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolPropiedad_Rol">
+          <End Type="Modelos.Rol" Role="Rol" Multiplicity="1" />
+          <End Type="Modelos.RolPropiedad" Role="RolPropiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="RolId" />
+            </Principal>
+            <Dependent Role="RolPropiedad">
+              <PropertyRef Name="RolId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolUsuario_Rol">
+          <End Type="Modelos.Rol" Role="Rol" Multiplicity="1" />
+          <End Type="Modelos.RolUsuario" Role="RolUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="RolId" />
+            </Principal>
+            <Dependent Role="RolUsuario">
+              <PropertyRef Name="RolId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolUsuario_Usuario">
+          <End Type="Modelos.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="Modelos.RolUsuario" Role="RolUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="UsuarioId" />
+            </Principal>
+            <Dependent Role="RolUsuario">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValorPropiedad_Usuario">
+          <End Type="Modelos.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="Modelos.ValorPropiedad" Role="ValorPropiedad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="UsuarioId" />
+            </Principal>
+            <Dependent Role="ValorPropiedad">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S"
+               xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelosStoreContainer"
+                                CdmEntityContainer="ModeloPrincipal">
+          <EntitySetMapping Name="Aplicacion">
+            <EntityTypeMapping TypeName="Modelos.Aplicacion">
+              <MappingFragment StoreEntitySet="Aplicacion">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="AplicacionId" ColumnName="AplicacionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ErrorAplicacion">
+            <EntityTypeMapping TypeName="Modelos.ErrorAplicacion">
+              <MappingFragment StoreEntitySet="ErrorAplicacion">
+                <ScalarProperty Name="Registrado" ColumnName="Registrado" />
+                <ScalarProperty Name="Interna" ColumnName="Interna" />
+                <ScalarProperty Name="Excepcion" ColumnName="Excepcion" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Aplicacion" ColumnName="Aplicacion" />
+                <ScalarProperty Name="ErrorAplicacionId" ColumnName="ErrorAplicacionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Membresia">
+            <EntityTypeMapping TypeName="Modelos.Membresia">
+              <MappingFragment StoreEntitySet="Membresia">
+                <ScalarProperty Name="Registrado" ColumnName="Registrado" />
+                <ScalarProperty Name="UltimoBloqueo" ColumnName="UltimoBloqueo" />
+                <ScalarProperty Name="EstaBloqueado" ColumnName="EstaBloqueado" />
+                <ScalarProperty Name="EstaAprobado" ColumnName="EstaAprobado" />
+                <ScalarProperty Name="InicioIntentosFallidosPregunta" ColumnName="InicioIntentosFallidosPregunta" />
+                <ScalarProperty Name="CantidadIntentosFallidosPregunta" ColumnName="CantidadIntentosFallidosPregunta" />
+                <ScalarProperty Name="InicioIntentosFallidosPassword" ColumnName="InicioIntentosFallidosPassword" />
+                <ScalarProperty Name="CantidadIntentosFallidosPassword" ColumnName="CantidadIntentosFallidosPassword" />
+                <ScalarProperty Name="UltimoCambioDePassword" ColumnName="UltimoCambioDePassword" />
+                <ScalarProperty Name="UltimaSesion" ColumnName="UltimaSesion" />
+                <ScalarProperty Name="UltimaActividad" ColumnName="UltimaActividad" />
+                <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+                <ScalarProperty Name="RespuestaPassword" ColumnName="RespuestaPassword" />
+                <ScalarProperty Name="PreguntaPassword" ColumnName="PreguntaPassword" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+                <ScalarProperty Name="AplicacionId" ColumnName="AplicacionId" />
+                <ScalarProperty Name="MembresiaId" ColumnName="MembresiaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Perfil">
+            <EntityTypeMapping TypeName="Modelos.Perfil">
+              <MappingFragment StoreEntitySet="Perfil">
+                <ScalarProperty Name="UltimaActualizacion" ColumnName="UltimaActualizacion" />
+                <ScalarProperty Name="UltimaActividad" ColumnName="UltimaActividad" />
+                <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+                <ScalarProperty Name="AplicacionId" ColumnName="AplicacionId" />
+                <ScalarProperty Name="PerfilId" ColumnName="PerfilId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Propiedad">
+            <EntityTypeMapping TypeName="Modelos.Propiedad">
+              <MappingFragment StoreEntitySet="Propiedad">
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="PropiedadId" ColumnName="PropiedadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rol">
+            <EntityTypeMapping TypeName="Modelos.Rol">
+              <MappingFragment StoreEntitySet="Rol">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="AplicacionId" ColumnName="AplicacionId" />
+                <ScalarProperty Name="RolId" ColumnName="RolId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolPropiedad">
+            <EntityTypeMapping TypeName="Modelos.RolPropiedad">
+              <MappingFragment StoreEntitySet="RolPropiedad">
+                <ScalarProperty Name="PropiedadId" ColumnName="PropiedadId" />
+                <ScalarProperty Name="RolId" ColumnName="RolId" />
+                <ScalarProperty Name="RolPropiedadId" ColumnName="RolPropiedadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolUsuario">
+            <EntityTypeMapping TypeName="Modelos.RolUsuario">
+              <MappingFragment StoreEntitySet="RolUsuario">
+                <ScalarProperty Name="RolId" ColumnName="RolId" />
+                <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+                <ScalarProperty Name="RolUsuarioId" ColumnName="RolUsuarioId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SiteMap">
+            <EntityTypeMapping TypeName="Modelos.SiteMap">
+              <MappingFragment StoreEntitySet="SiteMap">
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="PadreId" ColumnName="PadreId" />
+                <ScalarProperty Name="Roles" ColumnName="Roles" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="AplicacionId" ColumnName="AplicacionId" />
+                <ScalarProperty Name="SiteMapId" ColumnName="SiteMapId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="Modelos.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="ProviderUserKey" ColumnName="ProviderUserKey" />
+                <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ValorPropiedad">
+            <EntityTypeMapping TypeName="Modelos.ValorPropiedad">
+              <MappingFragment StoreEntitySet="ValorPropiedad">
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="PropiedadId" ColumnName="PropiedadId" />
+                <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing"
+                          Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild"
+                          Value="true" />
+        <DesignerProperty Name="EnablePluralization"
+                          Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel"
+                          Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy"
+                          Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloPrincipal">
+        <EntityTypeShape EntityType="Modelos.Aplicacion" Width="1.5" PointX="0.75" PointY="4.375" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="Modelos.ErrorAplicacion" Width="1.5" PointX="0.75" PointY="0.75" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="Modelos.Membresia" Width="1.5" PointX="6" PointY="5.75" Height="5.0571093750000031" />
+        <EntityTypeShape EntityType="Modelos.Perfil" Width="1.5" PointX="3" PointY="4.125" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="Modelos.Propiedad" Width="1.5" PointX="0.75" PointY="13.375" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="Modelos.Rol" Width="1.5" PointX="0.75" PointY="10.375" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="Modelos.RolPropiedad" Width="1.5" PointX="3" PointY="13.875" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="Modelos.RolUsuario" Width="1.5" PointX="3" PointY="7.375" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="Modelos.SiteMap" Width="1.5" PointX="2.75" PointY="0.75" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="Modelos.Usuario" Width="1.5" PointX="0.75" PointY="7.125" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="Modelos.ValorPropiedad" Width="1.5" PointX="3" PointY="10.375" Height="1.9802864583333388" />
+        <AssociationConnector Association="Modelos.FK_Membresia_Aplicacion" >
+          <ConnectorPoint PointX="1.5" PointY="6.1629850260416674" />
+          <ConnectorPoint PointX="1.5" PointY="6.8749999996026361" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="6.8749999996026352" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="6.8749999996026361" />
+          <ConnectorPoint PointX="5.625" PointY="6.8749999996026361" />
+          <ConnectorPoint PointX="5.625" PointY="8.2785546875000016" />
+          <ConnectorPoint PointX="6" PointY="8.2785546875000016" />
+        </AssociationConnector>
+        <AssociationConnector Association="Modelos.FK_Perfil_Aplicacion" >
+          <ConnectorPoint PointX="2.25" PointY="5.2689925130208337" />
+          <ConnectorPoint PointX="3" PointY="5.2689925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="Modelos.FK_Membresia_Usuario" >
+          <ConnectorPoint PointX="2.25" PointY="7.218749999801318" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="7.2187499998013172" />
+          <ConnectorPoint PointX="5.708333333333333" PointY="7.218749999801318" />
+          <ConnectorPoint PointX="6" PointY="7.218749999801318" />
+        </AssociationConnector>
+        <AssociationConnector Association="Modelos.FK_Perfil_Usuario" >
+          <ConnectorPoint PointX="2.2499999996026361" PointY="7.125" />
+          <ConnectorPoint PointX="2.625" PointY="6.7499999996026361" />
+          <ConnectorPoint PointX="2.625" PointY="6.8648893229166674" />
+          <ConnectorPoint PointX="3" PointY="6.4898893229166674" />
+        </AssociationConnector>
+        <AssociationConnector Association="Modelos.FK_RolPropiedad_Propiedad" >
+          <ConnectorPoint PointX="2.25" PointY="14.615143229166669" />
+          <ConnectorPoint PointX="2.7291666666666665" PointY="14.615143229166669" />
+          <ConnectorPoint PointX="2.8958333333333335" PointY="14.615143229166669" />
+          <ConnectorPoint PointX="3" PointY="14.615143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="Modelos.FK_ValorPropiedad_Propiedad" >
+          <ConnectorPoint PointX="2.25" PointY="13.376152846153847" />
+          <ConnectorPoint PointX="2.625" PointY="13.001152846153847" />
+          <ConnectorPoint PointX="2.625" PointY="11.365143229166669" />
+          <ConnectorPoint PointX="3" PointY="11.365143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="Modelos.FK_RolPropiedad_Rol" >
+          <ConnectorPoint PointX="2.25" PointY="12.292977766025647" />
+          <ConnectorPoint PointX="2.5660744349011213" PointY="12.609052200926767" />
+          <ConnectorPoint PointX="2.6839255650988791" PointY="12.726903331124525" />
+          <ConnectorPoint PointX="2.8125" PointY="12.855477766025647" />
+          <ConnectorPoint PointX="2.8125" PointY="15.266466843750006" />
+          <ConnectorPoint PointX="3" PointY="15.266466843750006" />
+        </AssociationConnector>
+        <AssociationConnector Association="Modelos.FK_RolUsuario_Rol" >
+          <ConnectorPoint PointX="2.25" PointY="10.376152846153847" />
+          <ConnectorPoint PointX="2.625" PointY="10.001152846153847" />
+          <ConnectorPoint PointX="2.625" PointY="8.36514322916667" />
+          <ConnectorPoint PointX="3" PointY="8.36514322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="Modelos.FK_RolUsuario_Usuario" >
+          <ConnectorPoint PointX="2.25" PointY="7.8075716145833347" />
+          <ConnectorPoint PointX="3" PointY="7.8075716145833347" />
+        </AssociationConnector>
+        <AssociationConnector Association="Modelos.FK_ValorPropiedad_Usuario" >
+          <ConnectorPoint PointX="2.25" PointY="9.42758063100634" />
+          <ConnectorPoint PointX="2.5660744349011213" PointY="9.74365506590746" />
+          <ConnectorPoint PointX="2.6839255650988791" PointY="9.8615061961052177" />
+          <ConnectorPoint PointX="2.8125" PointY="9.99008063100634" />
+          <ConnectorPoint PointX="2.8125" PointY="10.838819614583333" />
+          <ConnectorPoint PointX="3" PointY="10.838819614583333" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

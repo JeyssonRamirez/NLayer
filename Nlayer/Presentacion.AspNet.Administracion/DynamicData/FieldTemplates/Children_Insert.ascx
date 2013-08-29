@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" CodeBehind="Children_Insert.ascx.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.DynamicData.FieldTemplates.Children_InsertField" %>

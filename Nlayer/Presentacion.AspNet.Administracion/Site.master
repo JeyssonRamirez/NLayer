@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Sci.Nlayer.Presentacion.AspNet.Administracion.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="Styles/style.css" type="text/css" media="screen" />
+    <link href="Styles/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 6]><link rel="stylesheet" href="Styles/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="Styles/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server" id="masterForm">
+    <asp:ScriptManager ID="scriptManager" runat="server" EnableScriptGlobalization="true"
+        EnableScriptLocalization="true" EnablePartialRendering="true" ScriptMode="Release"
+        OnAsyncPostBackError="ScriptManagerAsyncPostBackError">
+        <Scripts>
+            <asp:ScriptReference Path="~/Scripts/jquery-1.6.2.min.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery-ui-1.8.16.custom.min.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery.ui.datepicker-es.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery.validate.min.js" />
+            <asp:ScriptReference Path="~/Scripts/additional-methods.min.js" />
+            <asp:ScriptReference Path="~/Scripts/script.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div id="art-main">
+        <div class="art-sheet">
+            <div class="art-sheet-tl"></div>
+            <div class="art-sheet-tr"></div>
+            <div class="art-sheet-bl"></div>
+            <div class="art-sheet-br"></div>
+            <div class="art-sheet-tc"></div>
+            <div class="art-sheet-bc"></div>
+            <div class="art-sheet-cl"></div>
+            <div class="art-sheet-cr"></div>
+            <div class="art-sheet-cc"></div>
+            <div class="art-sheet-body">
+                <div class="art-header">
+                    <div class="art-header-center">
+                        <div class="art-header-png"></div>
+                        <div class="art-header-jpeg"></div>
+                    </div>
+                    <div class="art-logo">
+                        <div style="float: right;">
+                            <asp:LoginView ID="headLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate>
+                                    [
+                                    <asp:HyperLink NavigateUrl="~/Cuentas/IniciarSesion.aspx" runat="server">Iniciar Sesión</asp:HyperLink>]
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    Bienvenido
+                                    <asp:LoginName ID="HeadLoginName" runat="server" />
+                                    ! [<asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesión"
+                                        LogoutPageUrl="~/Default.aspx" />
+                                    ]
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-nav">
+                    <div class="l"></div>
+                    <div class="r"></div>
+                    <asp:SiteMapDataSource ShowStartingNode="false" ID="siteMapDataSource" runat="server"
+                        SiteMapProvider="SCISiteMapProvider" />
+                    <asp:Repeater ID="siteMapRepeater" runat="server" DataSourceID="siteMapDataSource">
+                        <HeaderTemplate>
+                            <ul class="art-menu">
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <li>
+                                <a href='<%# ResolverUrl(Eval("Url")) %>'>
+                                    <span class="l"></span>
+                                    <span class="r"></span>
+                                    <span class="t">
+                                        <%# Eval("Title") %></span></a>
+                                <asp:SiteMapDataSource ShowStartingNode="false" ID="dosSiteMapDataSource" StartFromCurrentNode="false"
+                                    StartingNodeUrl='<%# Eval("Url") %>' runat="server" SiteMapProvider="SCISiteMapProvider" />
+                                <asp:Repeater runat="server" DataSourceID="dosSiteMapDataSource">
+                                    <HeaderTemplate>
+                                        <ul>
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
+                                        <li>
+                                            <a href='<%# ResolverUrl(Eval("Url")) %>'>
+                                                <%# Eval("Title") %></a>
+                                            <asp:SiteMapDataSource ShowStartingNode="false" ID="tresSiteMapDataSource" StartFromCurrentNode="false"
+                                                StartingNodeUrl='<%# Eval("Url") %>' runat="server" SiteMapProvider="SCISiteMapProvider" />
+                                            <asp:Repeater runat="server" DataSourceID="tresSiteMapDataSource">
+                                                <HeaderTemplate>
+                                                    <ul>
+                                                </HeaderTemplate>
+                                                <ItemTemplate>
+                                                    <li>
+                                                        <a href='<%# ResolverUrl(Eval("Url")) %>'>
+                                                            <%# Eval("Title") %></a></li>
+                                                </ItemTemplate>
+                                                <FooterTemplate>
+                                                    </ul></FooterTemplate>
+                                            </asp:Repeater>
+                                        </li>
+                                    </ItemTemplate>
+                                    <FooterTemplate>
+                                        </ul></FooterTemplate>
+                                </asp:Repeater>
+                            </li>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </ul></FooterTemplate>
+                    </asp:Repeater>
+                </div>
+                <div class="art-content-layout">
+                    <div class="art-post">
+                        <div class="art-post-tl"></div>
+                        <div class="art-post-tr"></div>
+                        <div class="art-post-bl"></div>
+                        <div class="art-post-br"></div>
+                        <div class="art-post-tc"></div>
+                        <div class="art-post-bc"></div>
+                        <div class="art-post-cl"></div>
+                        <div class="art-post-cr"></div>
+                        <div class="art-post-cc"></div>
+                        <div class="art-post-body">
+                            <div>
+                                <div class="art-postcontent">
+                                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                                </div>
+                                <div class="cleared"></div>
+                            </div>
+                            <div class="cleared"></div>
+                        </div>
+                    </div>
+                    <div class="cleared"></div>
+                </div>
+                <div class="cleared"></div>
+                <div class="art-footer">
+                    <div class="art-footer-t"></div>
+                    <div class="art-footer-l"></div>
+                    <div class="art-footer-b"></div>
+                    <div class="art-footer-r"></div>
+                    <div class="art-footer-body">
+                        <div class="art-footer-text">
+                            <p>SCI NLayer Template</p>
+                            <p>Copyright © SCI Software 2011. Todos los derechos reservados.</p>
+                        </div>
+                        <div class="cleared"></div>
+                    </div>
+                </div>
+                <div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <p class="art-page-footer"></p>
+    </div>
+    <div id="loading" style="display: none; text-align: center;" title="Enviando Solicitud...">
+        <asp:Image ID="loaderImage" ImageUrl="~/Styles/images/activity.gif" AlternateText="Loader" runat="server" />
+    </div>
+    </form>
+</body>
+</html>
